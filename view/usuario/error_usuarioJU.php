@@ -6,9 +6,9 @@
 <html lang="es">
   <head>
     <title>Listas</title>
-    
+
     <!--I     N      H      A      B      I     L      I      T      A         FLECHA ATRAS----------------->
-    <meta http-equiv="Expires" content="0" /> 
+    <meta http-equiv="Expires" content="0" />
     <meta http-equiv="Pragma" content="no-cache" />
     <script type="text/javascript">
      if(history.forward(1)){
@@ -81,15 +81,15 @@
                 <th style="width:120px;">1er Nombre</th>
                 <th style="width:120px;">2do Nombre</th>
                 <th style="width:120px;">1er Apellido</th>
-          <th style="width:120px;">2do Apellido</th>
-          <th style="width:120px;">Password</th>
-          <th style="width:120px;">Tipo usuario</th>
-          <th style="width:120px;">Rol</th>
-          <th style="width:120px;">Programa</th>
-          <th style="width:120px;">Mesa</th>
-          <th style="width:120px;">Estado</th>
-          <th></th>
-          <th></th>
+                <th style="width:120px;">2do Apellido</th>
+                <th style="width:120px;">Password</th>
+                <th style="width:120px;">Tipo usuario</th>
+                <th style="width:120px;">Rol</th>
+                <th style="width:120px;">Programa</th>
+                <th style="width:120px;">Mesa</th>
+                <th style="width:120px;">Estado</th>
+                <th></th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -100,21 +100,21 @@
                 <td><?php echo $r->nombre1; ?></td>
                 <td><?php echo $r->nombre2; ?></td>
                 <td><?php echo $r->apellido1; ?></td>
-          <td><?php echo $r->apellido2; ?></td>
-          <td><?php echo $r->password; ?></td>
-          <td><?php echo $r->id_tipo_usuario; ?></td>
-          <td><?php echo $r->id_rol; ?></td>
-          <td><?php echo $r->id_programa; ?></td>
-          <td><?php echo $r->id_mesa; ?></td>
-          <td><?php echo $r->id_estado_usuario; ?></td>
-                
+                <td><?php echo $r->apellido2; ?></td>
+                <td><?php echo $r->password; ?></td>
+                <td><?php echo $r->id_tipo_usuario; ?></td>
+                <td><?php echo $r->id_rol; ?></td>
+                <td><?php echo $r->id_programa; ?></td>
+                <td><?php echo $r->id_mesa; ?></td>
+                <td><?php echo $r->id_estado_usuario; ?></td>
+
                     <td>
                     <a class="btn btn-success" onclick="funcion_autorizar(<?php echo $r->codigo; ?>)">
                             <em class="fa fa-pencil"></em>
                             Autorizar
                         </a>
                 </td>
-                
+
                     <td>
                     <a class="btn btn-danger" onclick="funcion_desautorizar(<?php echo $r->codigo; ?>)">
                             <em class="fa fa-pencil"></em>
@@ -157,7 +157,7 @@
         <script src="../assets/js/jquery.anexsoft-validator.js"></script>
     <!--<script src="../assets/js/alertas.js"></script> NO LA ESTOY USANDO PERO SI ESTA EN LOS ARCHIVOS-->
     <script src="../assets/js/cerrarSJU.js"></script>
-    
+
     <script type="text/javascript">
       function funcion_autorizar(id) {
         //alert("Hey: " + id);

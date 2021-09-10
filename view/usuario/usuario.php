@@ -66,13 +66,13 @@
             		<td><?php echo $r->nombre1; ?></td>
             		<td><?php echo $r->nombre2; ?></td>
             		<td><?php echo $r->apellido1; ?></td>
-					     <td><?php echo $r->apellido2; ?></td>
-					     <td><?php echo $r->password; ?></td>
-					     <td><?php echo $r->id_tipo_usuario; ?></td>
-					     <td><?php echo $r->id_rol; ?></td>
-					     <td><?php echo $r->id_programa; ?></td>
-					     <td><?php echo $r->id_mesa; ?></td>
-					     <td><?php echo $r->id_estado_usuario; ?></td>
+					      <td><?php echo $r->apellido2; ?></td>
+					      <td><?php echo $r->password; ?></td>
+					      <td><?php echo $r->id_tipo_usuario; ?></td>
+					      <td><?php echo $r->id_rol; ?></td>
+					      <td><?php echo $r->id_programa; ?></td>
+					      <td><?php echo $r->id_mesa; ?></td>
+					      <td><?php echo $r->id_estado_usuario; ?></td>
             		<td>
                 		<a class="btn btn-success" href="?c=usuario&a=Crud&codigo=<?php echo $r->codigo; ?>"><em class="fa fa-pencil"></em></a>
             		</td>
