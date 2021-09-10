@@ -16,20 +16,17 @@
         <img class="logo" src="../../assets/img/logo_derecha.jpg" style="width: 80px;height: 50px;" />
       </div>
     </div>
-    
+
     <br>
-      
+
     <nav class="navbar navbar-default">
         <div class="container-fluid">
           <div class="navbar-header">
               <a style="font-size: 20px;" class="navbar-brand" href="">Votante</a>
           </div>
           <ul class="nav navbar-nav">
-              <li style="font-size: 16px;"><a href="">Consejo Superior</a></li>
-              <li style="font-size: 16px;"><a href="">Consejo Académico</a></li>
               <li style="font-size: 16px;" class="active"><a href="consejoFacultad.php">Consejos de Facultad</a></li>
-              <li style="font-size: 16px;"><a href="">Consejos de Programa</a></li>
-              <li style="font-size: 16px;"><a href="">CIARP</a></li>
+              <li style="font-size: 16px;"><a href="">Finalizado</a></li>
           </ul>
         </div>
     </nav>
@@ -47,10 +44,10 @@
 
     <div class="panel" style="text-align: left; font-size: 16px;">
       <?php
-      echo $time2 . ', '; echo date("g:i a", strtotime($time1));  
+      echo $time2 . ', '; echo date("g:i a", strtotime($time1));
       ?>
     </div>
-    
+
     <div class="panel panel-info" style="font-size: 18px; height: 450px;">
     <div class="panel-heading" style="height: 130px;">
       <br><center><h1 style="font-size: 45px;"><?php echo $nombreOrgano; ?></h1></center><br><br><br>
@@ -87,7 +84,7 @@
   <div class="d-flex justify-content-center mt-4">
     <center><button type="button" class="btn btn-success" id="btn_id" style="font-size: 20px;">REGISTRAR</button></center>
   </div>
-  
+
   </div>
   <!-- FIN DIV container mt-4-- >
 
@@ -133,7 +130,7 @@
           </span>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary"  data-dismiss="modal" onclick="window.location.href='consejoPrograma.php'"> ACEPTAR </button>
+          <button type="button" class="btn btn-secondary"  data-dismiss="modal" onclick="window.location.href='ciarp.php'"> ACEPTAR </button>
         </div>
       </div>
     </div>
