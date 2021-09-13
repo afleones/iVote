@@ -39,7 +39,6 @@
         Cerrar Sesión
       </button>
       -->
-
     </div>
 
     <div class="panel" style="text-align: left; font-size: 16px;">

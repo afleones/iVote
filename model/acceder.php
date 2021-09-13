@@ -1,4 +1,5 @@
 <?php
+	session_start();
 	include '../model/conexion.php';
 	require_once '../model/reloj.php';
 	$mysqli = getConn();
@@ -12,6 +13,7 @@
 	$password = $filas["password"];
 	$estadoActual = $filas["id_estado_usuario"];
 	$rolActual = $filas["id_rol"];
+	$tipoUsuario = $filas["id_tipo_usuario"];
 
 	if($password == $pass && $rolActual === 'J' && $estadoActual != '2') {
 		/*if( ($hora<$inicioAM && $zona=='am') || ($hora>$inicioPM && $zona=='pm') ){

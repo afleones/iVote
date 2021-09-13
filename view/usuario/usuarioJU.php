@@ -22,7 +22,7 @@
 
 <div class="panel" style="text-align: left; font-size: 16px;">
     <?php
-        echo $time2 . ', '; echo date("g:i a", strtotime($time1));  
+        echo $time2 . ', '; echo date("g:i a", strtotime($time1));
     ?>
     <div style="float: right;margin-top: -15px;">
         <button class="btn btn-default" onClick="cerrarSJU();" style="font-size: 16px;"><i class="fa fa-power-off" aria-hidden="true"></i>   Cerrar Sesión
@@ -30,7 +30,7 @@
     </div>
 </div>
 
-<h1 class="page-header"><span class="glyphicon glyphicon-user"></span>          Lista de Usuarios</h1>
+<h1 class="page-header"><span class="glyphicon glyphicon-user"></span>Lista de Usuarios</h1>
 <?php $cont=1; $cont2=1; ?>
 <div class="row"><!--PARA PAGINACIÓN-->
 	<div class="col-md-12"><!--PARA PAGINACIÓN-->
@@ -42,15 +42,15 @@
             		<th style="width:120px;">1er Nombre</th>
             		<th style="width:120px;">2do Nombre</th>
             		<th style="width:120px;">1er Apellido</th>
-					<th style="width:120px;">2do Apellido</th>
-					<th style="width:120px;">Password</th>
-					<th style="width:120px;">Tipo usuario</th>
-					<th style="width:120px;">Rol</th>
-					<th style="width:120px;">Programa</th>
-					<th style="width:120px;">Mesa</th>
-					<th style="width:120px;">Estado</th>
-					<th><i class="fa fa-check" aria-hidden="true"></i></th>
-					<th><i class="fa fa-times" aria-hidden="true"></i></th>
+      					<th style="width:120px;">2do Apellido</th>
+      					<th style="width:120px;">Password</th>
+      					<th style="width:120px;">Tipo usuario</th>
+      					<th style="width:120px;">Rol</th>
+      					<th style="width:120px;">Programa</th>
+      					<th style="width:120px;">Mesa</th>
+      					<th style="width:120px;">Estado</th>
+      					<th><i class="fa fa-check" aria-hidden="true"></i></th>
+      					<th><i class="fa fa-times" aria-hidden="true"></i></th>
         		</tr>
     		</thead>
     		<tbody>
@@ -61,14 +61,14 @@
             		<td><?php echo $r->nombre1; ?></td>
             		<td><?php echo $r->nombre2; ?></td>
             		<td><?php echo $r->apellido1; ?></td>
-					<td><?php echo $r->apellido2; ?></td>
-					<td><?php echo $r->password; ?></td>
-					<td><?php echo $r->id_tipo_usuario; ?></td>
-					<td><?php echo $r->id_rol; ?></td>
-					<td><?php echo $r->id_programa; ?></td>
-					<td><?php echo $r->id_mesa; ?></td>
-					<td><?php echo $r->id_estado_usuario; ?></td>
-            		
+      					<td><?php echo $r->apellido2; ?></td>
+      					<td><?php echo $r->password; ?></td>
+      					<td><?php echo $r->id_tipo_usuario; ?></td>
+      					<td><?php echo $r->id_rol; ?></td>
+      					<td><?php echo $r->id_programa; ?></td>
+      					<td><?php echo $r->id_mesa; ?></td>
+      					<td><?php echo $r->id_estado_usuario; ?></td>
+
                     <td>
                         <?php $code = $r->codigo; $state = $r->id_estado_usuario; $prog = $r->id_programa; $rolID = $r->id_rol; ?>
                 		<button class="btn btn-success" id="success<?php echo $cont?>" onclick="funcion_autorizar(<?php echo $code ?>, <?php echo $state ?>, '<?php echo $rolID ?>')">
@@ -77,7 +77,7 @@
             		</td>
 
                     <?php $cont++; ?>
-            		
+
                     <td>
                 		<button class="btn btn-danger" id="danger<?php echo $cont2?>" onclick="funcion_desautorizar(<?php echo $code ?>, <?php echo $state ?>, '<?php echo $rolID ?>')">
                             <i class="fa fa-times" aria-hidden="true"></i>
