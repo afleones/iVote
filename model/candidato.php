@@ -6,6 +6,7 @@ class candidato
     public $id_candidato;
     public $numero;
     public $id_organo;
+		public $id_tipo_usuario;
     public $foto;
 
 	public function __CONSTRUCT()
@@ -69,8 +70,8 @@ class candidato
 		try
 		{
 			$sql = "UPDATE candidato SET
-						numero          = ?,
-						id_organo        = ?,
+									numero          = ?,
+									id_organo        = ?,
             			foto        = ?
 				    WHERE id_candidato = ?";
 
@@ -98,7 +99,7 @@ class candidato
 		$resultado = mysqli_query($mysqli,$consulta);
 		$filas =  mysqli_fetch_array($resultado);
 		$rolA = $filas["id_rol"];
-		
+
 		if($rolA != 'J' && $rolA != 'A'){
 			try{
 				$sql = "INSERT INTO candidato (id_candidato,numero,id_organo,foto)
@@ -125,7 +126,7 @@ class candidato
 			require_once ('salir2.php');
 		}
 	}
-	
+
 	public function ListarID()
 	{
 		try
@@ -142,7 +143,7 @@ class candidato
 			die($e->getMessage());
 		}
 	}
-	
+
 	public function ListarOrgano()
 	{
 		try
@@ -160,21 +161,44 @@ class candidato
 		}
 	}
 #sin utilizar:
-	public function ListarCandidatos()
-	{
-		try
-		{
-			$result = array();
+	// public function ListarCandidatos()
+	// {
+	// 	try
+	// 	{
+	// 		$result = array();
+	//
+	// 		$stm = $this->pdo->prepare("SELECT codigo FROM usuario
+	// 																INNER JOIN tipo_usuario ON
+	// 																usuario.id_tipo_usuario =
+	// 																tipo_usuario.id_tipo_usuario
+	// 																INNER JOIN candidato ON candidato.id_candidato = usuario.codigo
+	// 																WHERE usuario.id_tipo_usuario = '$_SESSION["tipouser"]'");
+	// 		$stm->execute();
+	//
+	// 		return $stm->fetchAll(PDO::FETCH_OBJ);
+	// 	}
+	// 	catch(Exception $e)
+	// 	{
+	// 		die($e->getMessage());
+	// 	}
+	// }
 
-			$stm = $this->pdo->prepare("SELECT id_candidato FROM candidato WHERE id_organo = '1'");
-			$stm->execute();
+	// public function ValidarUsuario(){
+	// 	try
+	// 	{
+	// 		$result = array();
+	//
+	// 		$stm = $this->pdo->prepare("");
+	// 		$stm->execute();
+	//
+	// 		return $stm->fetchAll(PDO::FETCH_OBJ);
+	// 	}
+	// 	catch(Exception $e)
+	// 	{
+	// 		die($e->getMessage());
+	// 	}
+	// }
 
-			return $stm->fetchAll(PDO::FETCH_OBJ);
-		}
-		catch(Exception $e)
-		{
-			die($e->getMessage());
-		}
-	}
-	
+
+
 }

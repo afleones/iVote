@@ -59,7 +59,7 @@
       <div class="col-sm-8 mt-4">
         <h2 class="text-center ml-4">
           <b>
-            VOTO PARA ESTAMENTOS UNIVERSITARIOS
+            VOTO PARA ASPIRANTES AL CONSEJO DE FACULTAD
           </b>
         </h2>
       </div>

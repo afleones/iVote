@@ -58,11 +58,10 @@
       <?php
         for ($k=0;$k<$j;$k++){
           echo "<li class='col-xs-2 list-group-item'>";
-          echo "<input class='chk' id='cb$k' name='chk[]' value='$idcandidato[$k]' type='checkbox'/>";
+          echo "<input class='chk' id='cb$k' name='chk[]' value='$idcandidato[$k]' type='radio' style='visibility:hidden;'/>";
           echo "<label for='cb$k'>";
           echo "<img style='width: 100%;height: 100%' src='../../assets/img/candidatos/$foto[$k]'/>";
           echo "<h6 class='text-center'>";
-          echo $idcandidato[$k] . "<br>";
           echo $nom1[$k] . "<br>";
           echo $ape1[$k] . "<br>";
           echo "</h6></label></li>";

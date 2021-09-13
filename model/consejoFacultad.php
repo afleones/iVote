@@ -1,6 +1,8 @@
-<?php 
+<?php
+	session_start();
 	include "conexion.php";
 	$mysqli = getConn();
+
 /*
 	$organo = '3';
 	$consulta = "SELECT id_candidato, foto FROM candidato WHERE id_organo = '$organo'";
@@ -11,7 +13,20 @@
     		$j++;
   		}
   		*/
-  	$consulta = "SELECT candidato.id_candidato, candidato.foto, candidato.id_organo, candidato.numero, usuario.nombre1, usuario.nombre2, usuario.apellido1, usuario.apellido2 FROM usuario INNER JOIN candidato ON candidato.id_candidato = usuario.codigo WHERE candidato.id_organo = '3' ORDER BY usuario.nombre1";
+  	$consulta = "SELECT candidato.id_candidato,
+																	candidato.foto,
+																	candidato.id_organo,
+																	candidato.numero,
+																	usuario.nombre1,
+																	usuario.nombre2,
+																	usuario.apellido1,
+																	usuario.apellido2
+																	FROM usuario INNER JOIN tipo_usuario
+																	ON usuario.id_tipo_usuario = tipo_usuario.id_tipo_usuario
+																	INNER JOIN candidato
+																	ON candidato.id_candidato = usuario.codigo
+																	WHERE usuario.id_tipo_usuario = '".$_SESSION["tipouser"]."' ";
+
   	$resultado = mysqli_query($mysqli,$consulta); $j=0;
   		while($mostrar=mysqli_fetch_object($resultado)){
     		$idcandidato[$j] = $mostrar->id_candidato;
@@ -33,5 +48,5 @@
 	//echo $miarray[0];
 	//echo "<br>";
 	//echo $miarray[1];
-	//var_dump($miarray);	
+	//var_dump($miarray);
  ?>

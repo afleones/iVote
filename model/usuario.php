@@ -105,7 +105,7 @@ class usuario
 						id_programa        = ?,
 						id_mesa        = ?,
 						id_estado_usuario        = ?
-				    		WHERE codigo = ?";
+				    WHERE codigo = ?";
 			//Ejecución de la sentencia a partir de un arreglo.
 			$this->pdo->prepare($sql)
 			     ->execute(

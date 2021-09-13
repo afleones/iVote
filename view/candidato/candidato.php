@@ -21,7 +21,7 @@
 
 <div class="panel" style="text-align: left; font-size: 16px;">
     <?php
-        echo $time2 . ', '; echo date("g:i a", strtotime($time1));  
+        echo $time2 . ', '; echo date("g:i a", strtotime($time1));
     ?>
     <div style="float: right;margin-top: -15px;">
         <button class="btn btn-default" onClick="cerrarSCA();" style="font-size: 16px;"><i class="fa fa-power-off" aria-hidden="true"></i>   Cerrar Sesión
@@ -43,12 +43,13 @@
 		<!-- TABLE ORIGINAL table-striped -->
     		<thead>
         		<tr>
-            		<th style="width:180px;">ID Candidato</th>
-            		<th style="width:180px;">Número</th>
-            		<th style="width:180px;">Órgano</th>
-            		<th style="width:180px;">Foto</th>
-                    <th><em class="fa fa-pencil"></em></th>
-                    <th><em class="fa fa-trash"></em></th>
+              		<th style="width:180px;">ID Candidato</th>
+              		<th style="width:180px;">Número</th>
+              		<th style="width:180px;">Órgano</th>
+                  <th style="width:180px;">Tipo de Usuario</th>
+              		<th style="width:180px;">Foto</th>
+                  <th><em class="fa fa-pencil"></em></th>
+                  <th><em class="fa fa-trash"></em></th>
         		</tr>
     		</thead>
     		<tbody>
@@ -109,7 +110,7 @@
                     //setTimeout("location.href='../view/indexCA.php'", 1500);
                 }
                 });
-            }       
+            }
         </script>
 	</div>
 </div>
