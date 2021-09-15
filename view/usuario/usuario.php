@@ -25,7 +25,7 @@
     </div>
 </div>
 
-<h1 class="page-header"><span class="glyphicon glyphicon-user"></span>          Lista de Usuarios</h1>
+<h1 class="page-header"><span class="glyphicon glyphicon-user"></span>Lista de Usuarios</h1>
 
 <div class="well well-sm text-right">
     <a class="btn btn-primary" href="?c=usuario&a=Nuevo">Nuevo Usuario</a>

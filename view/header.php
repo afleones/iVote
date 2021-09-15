@@ -49,7 +49,6 @@
     			<ul class="nav navbar-nav">
       				<li style="font-size: 16px;"><a href="../view/indexUS.php">Usuarios</a></li><!--Elimine class active del <li>-->
       				<li style="font-size: 16px;"><a href="../view/indexCA.php">Candidatos</a></li>
-							<li style="font-size: 16px;"><a href="../view/indexUSJU.php">Votos</a></li>
       				<!--<li><a href="#">Page 3</a></li>-->
     			</ul>
   			</div>

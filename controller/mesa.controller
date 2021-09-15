@@ -49,8 +49,8 @@ class UsuarioController{
 
         //Captura de los datos del formulario (vista).
 
-		$pvd->id_mesa = $_REQUEST['id_mesa'];
-		$pvd->nombre = $_REQUEST['nombre'];
+    		$pvd->id_mesa = $_REQUEST['id_mesa'];
+    		$pvd->nombre = $_REQUEST['nombre'];
         $pvd->lugar = $_REQUEST['lugar'];
 
         //Registro al modelo usuario.
@@ -67,7 +67,7 @@ class UsuarioController{
     public function Editar(){
         $pvd = new mesa();
 
-        
+
         $pvd->id_mesa = $_REQUEST['id_mesa'];
         $pvd->nombre = $_REQUEST['nombre'];
         $pvd->lugar = $_REQUEST['lugar'];
