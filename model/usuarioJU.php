@@ -9,13 +9,13 @@ class usuarioJU
     public $nombre1;
     public $nombre2;
     public $apellido1;
-	public $apellido2;
-	public $password;
-	public $id_tipo_usuario;
-	public $id_rol;
-	public $id_programa;
-	public $id_mesa;
-	public $id_estado_usuario;
+		public $apellido2;
+		public $password;
+		public $id_tipo_usuario;
+		public $id_rol;
+		public $id_programa;
+		public $id_mesa;
+		public $id_estado_usuario;
 
 	//Método de conexión a SGBD.
 	public function __CONSTRUCT()
@@ -95,7 +95,7 @@ class usuarioJU
 		{
 			//Sentencia SQL para actualizar los datos.
 			$sql = "UPDATE usuario SET nombre1 = ?, nombre2 = ?, apellido1 = ?, apellido2 = ?, password = ?, id_tipo_usuario = ?, id_rol = ?, id_programa = ?, id_mesa = ?, id_estado_usuario = ? WHERE codigo = ?";
-			
+
 			//Ejecución de la sentencia a partir de un arreglo.
 			$this->pdo->prepare($sql)->execute(array($data->nombre1,$data->nombre2,$data->apellido1,$data->apellido2,$data->password,$data->id_tipo_usuario,$data->id_rol,$data->id_programa,$data->id_mesa,$data->id_estado_usuario,$data->codigo));
 		}catch (Exception $e)
@@ -134,7 +134,7 @@ class usuarioJU
 			die($e->getMessage());
 		}
 	}
-	
+
 	public function ListarTipoUsuario()
 	{
 		try
@@ -154,7 +154,7 @@ class usuarioJU
 			die($e->getMessage());
 		}
 	}
-	
+
 	public function ListarRol()
 	{
 		try
@@ -174,7 +174,7 @@ class usuarioJU
 			die($e->getMessage());
 		}
 	}
-	
+
 	public function ListarPrograma()
 	{
 		try
@@ -194,7 +194,7 @@ class usuarioJU
 			die($e->getMessage());
 		}
 	}
-	
+
 	public function ListarMesa()
 	{
 		try
@@ -214,7 +214,7 @@ class usuarioJU
 			die($e->getMessage());
 		}
 	}
-	
+
 	public function ListarEstado()
 	{
 		try
@@ -233,5 +233,5 @@ class usuarioJU
 			//Obtener mensaje de error.
 			die($e->getMessage());
 		}
-	}	
+	}
 }

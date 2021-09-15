@@ -10,6 +10,7 @@ class usuario
     public $nombre2;
     public $apellido1;
 		public $apellido2;
+		public $foto;
 		public $password;
 		public $id_tipo_usuario;
 		public $id_rol;

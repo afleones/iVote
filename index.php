@@ -15,15 +15,15 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style_login.css">
-	<link rel="icon" type="image/png" href="assets/img/favicon.ico"/>
-	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"> <!--en css font-family: 'Ubuntu', sans-serif;-->
-	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <script type="text/javascript" src="assets/js/Chart.js"></script>
-   <script type="text/javascript" src="assets/js/Chart.min.js"></script>
-   <script type="text/javascript" src="assets/js/Chart.bundle.js"></script>
-   <script type="text/javascript" src="assets/js/Chart.bundle.min.js"></script><!--GRAFICA-->
-   <script type="text/javascript" src="assets/js/jquery.min.js"></script>
-   <script src="http://code.jquery.com/jquery-latest.js"></script>
+  	<link rel="icon" type="image/png" href="assets/img/favicon.ico"/>
+  	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"> <!--en css font-family: 'Ubuntu', sans-serif;-->
+  	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script type="text/javascript" src="assets/js/Chart.js"></script>
+    <script type="text/javascript" src="assets/js/Chart.min.js"></script>
+    <script type="text/javascript" src="assets/js/Chart.bundle.js"></script>
+    <script type="text/javascript" src="assets/js/Chart.bundle.min.js"></script><!--GRAFICA-->
+    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
 
    <script type="text/javascript">
     $(document).ready(function(){

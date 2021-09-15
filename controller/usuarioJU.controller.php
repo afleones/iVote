@@ -59,13 +59,13 @@ class UsuarioJUController{
         $pvd->nombre1 = $_REQUEST['nombre1'];
         $pvd->nombre2 = $_REQUEST['nombre2'];
         $pvd->apellido1 = $_REQUEST['apellido1'];
-		$pvd->apellido2 = $_REQUEST['apellido2'];
-		$pvd->password = $_REQUEST['password'];
-		$pvd->id_tipo_usuario = $_REQUEST['id_tipo_usuario'];
-		$pvd->id_rol = $_REQUEST['id_rol'];
-		$pvd->id_programa = $_REQUEST['id_programa'];
-		$pvd->id_mesa = $_REQUEST['id_mesa'];
-		$pvd->id_estado_usuario = $_REQUEST['id_estado_usuario'];
+    		$pvd->apellido2 = $_REQUEST['apellido2'];
+    		$pvd->password = $_REQUEST['password'];
+    		$pvd->id_tipo_usuario = $_REQUEST['id_tipo_usuario'];
+    		$pvd->id_rol = $_REQUEST['id_rol'];
+    		$pvd->id_programa = $_REQUEST['id_programa'];
+    		$pvd->id_mesa = $_REQUEST['id_mesa'];
+    		$pvd->id_estado_usuario = $_REQUEST['id_estado_usuario'];
 
         //Registro al modelo usuario.
         $this->model->Registrar($pvd);
@@ -85,13 +85,13 @@ class UsuarioJUController{
         $pvd->nombre1 = $_REQUEST['nombre1'];
         $pvd->nombre2 = $_REQUEST['nombre2'];
         $pvd->apellido1 = $_REQUEST['apellido1'];
-		$pvd->apellido2 = $_REQUEST['apellido2'];
-		$pvd->password = $_REQUEST['password'];
-		$pvd->id_tipo_usuario = $_REQUEST['id_tipo_usuario'];
-		$pvd->id_rol = $_REQUEST['id_rol'];
-		$pvd->id_programa = $_REQUEST['id_programa'];
-		$pvd->id_mesa = $_REQUEST['id_mesa'];
-		$pvd->id_estado_usuario = $_REQUEST['id_estado_usuario'];
+    		$pvd->apellido2 = $_REQUEST['apellido2'];
+    		$pvd->password = $_REQUEST['password'];
+    		$pvd->id_tipo_usuario = $_REQUEST['id_tipo_usuario'];
+    		$pvd->id_rol = $_REQUEST['id_rol'];
+    		$pvd->id_programa = $_REQUEST['id_programa'];
+    		$pvd->id_mesa = $_REQUEST['id_mesa'];
+    		$pvd->id_estado_usuario = $_REQUEST['id_estado_usuario'];
 
         $this->model->Actualizar($pvd);
 
@@ -104,7 +104,7 @@ class UsuarioJUController{
         header('Location: ../view/indexUSJU.php');
     }
 
-    
+
 }
 }//fin del else
 ?>

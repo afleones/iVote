@@ -89,7 +89,8 @@ INSERT INTO `facultad` (`id_facultad`, `nombre`) VALUES
 (1, 'Ciencias Humanas'),
 (2, 'Ciencias de la Salud'),
 (3, 'Ingenierias'),
-(4, 'Ciencias Contables');
+(4, 'Ciencias Adm & Cont'),
+(5, 'Ciencias Naturales');
 
 -- --------------------------------------------------------
 
@@ -162,10 +163,8 @@ CREATE TABLE `organo` (
 --
 
 INSERT INTO `organo` (`id_organo`, `nombre`, `descripcion`) VALUES
-(1, 'Consejo Superior', NULL),
-(2, 'Consejo Académico', NULL),
-(3, 'Consejo de Facultad', NULL),
-(4, 'Consejo de Programa', NULL);
+(3, 'Consejo de Facultad', NULL);
+
 
 -- --------------------------------------------------------
 
@@ -184,8 +183,21 @@ CREATE TABLE `programa` (
 --
 
 INSERT INTO `programa` (`id_programa`, `nombre`, `id_facultad`) VALUES
-(14, 'Ingeniería de Sistemas', 6),
-(15, 'Ingeniería Civil', 6);
+(1, 'Ingeniería de Sistemas', 3),
+(2, 'Ingeniería Civil', 3),
+(3, 'Ingeniería Industrial', 3),
+(4, 'Ingeniería Agroindustrial', 3),
+(5, 'Medicina', 2),
+(6, 'Odontologia', 2),
+(7, 'Enfermeria', 2),
+(8, 'Optometria', 2),
+(9, 'Nutricion', 2),
+(10, 'Psicologia', 1),
+(11, 'Biologia Marina', 1),
+(12, 'Derecho', 1),
+(13, 'contaduria publica', 4),
+(14, 'EANI', 4),
+(15, 'Gastronomia', 4);
 
 -- --------------------------------------------------------
 
@@ -255,9 +267,9 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`codigo`, `nombre1`, `nombre2`, `apellido1`, `apellido2`, `password`, `id_tipo_usuario`, `id_rol`, `id_programa`, `id_mesa`, `id_estado_usuario`) VALUES
-(73153886, 'Dany', 'Jose', 'Romero', 'Cortez', '73153886', 'DOC', 'J', 15, 11, 3),
-(1143263398, 'Andres', 'Felipe', 'Leones', 'Palacio', '1143263398', 'DOC', 'A', 14, 9, 1),
-(2010020220, 'Federico', 'Fernando', 'Jurado', 'Preciado', 'federico', 'EGR', 'V', 14, 10, 4),
+(73153886, 'Dany', 'Jose', 'Romero', 'Cortez', '73153886', 'EGR', 'V', 15, 11, 3),
+(1143263398, 'Andres', 'Felipe', 'Leones', 'Palacio', '1143263398', 'EST', 'A', 14, 9, 1),
+(2010020220, 'Federico', 'Fernando', 'Jurado', 'Preciado', 'federico', 'EST', 'V', 14, 10, 4),
 (2010123112, 'Gabriel', 'Jesús', 'Quintero', 'Fula', 'gabriel', 'DOC', 'V', 14, 8, 2),
 (2010123123, 'Hillary', 'Sofia', 'Barreto', 'Castaneda', 'hillary', 'EST', 'A', 14, 7, 1),
 (2012111229, 'Carlos', 'Enrique', 'Castro', 'Fula', 'carlos', 'EST', 'J', 14, 6, 1),

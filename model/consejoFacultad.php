@@ -13,19 +13,32 @@
     		$j++;
   		}
   		*/
+
+			// Variable de Session para Facultad
+			$consultaFac = "SELECT programa.id_facultad
+											FROM facultad INNER JOIN programa
+											ON facultad.id_facultad = programa.id_facultad
+											WHERE programa.id_programa = '".$_SESSION["prog"]."'";
+
+			$resultadoFac = mysqli_query($mysqli,$consultaFac);
+			$filaFac =  mysqli_fetch_array($resultadoFac);
+			$_SESSION["fac"] = $filaFac["id_facultad"];
+
   	$consulta = "SELECT candidato.id_candidato,
-																	candidato.foto,
-																	candidato.id_organo,
-																	candidato.numero,
-																	usuario.nombre1,
-																	usuario.nombre2,
-																	usuario.apellido1,
-																	usuario.apellido2
-																	FROM usuario INNER JOIN tipo_usuario
-																	ON usuario.id_tipo_usuario = tipo_usuario.id_tipo_usuario
-																	INNER JOIN candidato
-																	ON candidato.id_candidato = usuario.codigo
-																	WHERE usuario.id_tipo_usuario = '".$_SESSION["tipouser"]."' ";
+												candidato.foto,
+												candidato.id_organo,
+												candidato.numero,
+												usuario.nombre1,
+												usuario.nombre2,
+												usuario.apellido1,
+												usuario.apellido2,
+												programa.nombre,
+												facultad.nombre FROM usuario
+												INNER JOIN tipo_usuario ON usuario.id_tipo_usuario = tipo_usuario.id_tipo_usuario
+												INNER JOIN candidato ON candidato.id_candidato = usuario.codigo
+												INNER JOIN programa ON programa.id_programa = usuario.id_programa
+												INNER JOIN facultad ON facultad.id_facultad = programa.id_facultad
+												WHERE usuario.id_tipo_usuario = '".$_SESSION["tipouser"]."' AND facultad.id_facultad = ".$_SESSION["fac"]." ";
 
   	$resultado = mysqli_query($mysqli,$consulta); $j=0;
   		while($mostrar=mysqli_fetch_object($resultado)){
