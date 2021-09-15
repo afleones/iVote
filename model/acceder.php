@@ -13,7 +13,6 @@
 	$password = $filas["password"];
 	$estadoActual = $filas["id_estado_usuario"];
 	$rolActual = $filas["id_rol"];
-	$tipoUsuario = $filas["id_tipo_usuario"];
 
 	if($password == $pass && $rolActual === 'J' && $estadoActual != '2') {
 		/*if( ($hora<$inicioAM && $zona=='am') || ($hora>$inicioPM && $zona=='pm') ){
@@ -23,7 +22,6 @@
               	</script>';
         	require_once("salir.php");
     	}else{*/
-			session_start();
 			$_SESSION["name"] = $filas["nombre1"];
 			$_SESSION["name2"] = $filas["nombre2"];
 			$_SESSION["ape1"] = $filas["apellido1"];

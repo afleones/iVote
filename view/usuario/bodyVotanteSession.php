@@ -8,7 +8,7 @@
       <div class="col-sm-8 mt-4">
         <h2 class="text-center ml-4">
           <b>
-            VOTO PARA ESTAMENTOS UNIVERSITARIOS
+            ELECCIONES PARA EL CONSEJO DE FACULTAD UNISINU CARTAGENA
           </b>
         </h2>
       </div>
@@ -25,7 +25,7 @@
           </div>
           <ul class="nav navbar-nav">
               <li style="font-size: 16px;"><a href="">Consejos de Facultad</a></li>
-              <li style="font-size: 16px;"><a href="">CIARP<!--contenido--></a></li>
+              <li style="font-size: 16px;"><a href=""><!--contenido--></a></li>
           </ul>
         </div>
     </nav>

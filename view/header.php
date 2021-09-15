@@ -2,9 +2,9 @@
 <html lang="es">
 	<head>
 		<title>Listas</title>
-		
+
 		<!--I     N      H      A      B      I     L      I      T      A         FLECHA ATRAS----------------->
-		<meta http-equiv="Expires" content="0" /> 
+		<meta http-equiv="Expires" content="0" />
 		<meta http-equiv="Pragma" content="no-cache" />
 		<script type="text/javascript">
   		if(history.forward(1)){
@@ -49,6 +49,7 @@
     			<ul class="nav navbar-nav">
       				<li style="font-size: 16px;"><a href="../view/indexUS.php">Usuarios</a></li><!--Elimine class active del <li>-->
       				<li style="font-size: 16px;"><a href="../view/indexCA.php">Candidatos</a></li>
+							<li style="font-size: 16px;"><a href="../view/indexUSJU.php">Votos</a></li>
       				<!--<li><a href="#">Page 3</a></li>-->
     			</ul>
   			</div>

@@ -11,13 +11,8 @@
 <div class="panel" style="text-align: left; font-size: 16px;">
         <img src="../assets/img/admin.png">
       <?php
-        echo $_SESSION["name"] . "  " . $_SESSION["name2"] . "  " . $_SESSION["ape1"] . "  " . $_SESSION["ape2"] . " - " . $_SESSION["id_usuario"];
+        echo $_SESSION["name"] . "  " . $_SESSION["name2"] . "  " . $_SESSION["ape1"] . "  " . $_SESSION["ape2"] . " - " . $_SESSION["id_usuario"] . " - " .$_SESSION["tipouser"];
       ?>
-      <!--OPCIÓN a implementar despues
-      <button onclick="" style="object-position: left;position: relative;left:665px;margin-top: 7px;" class="btn btn-secundary" id="cerrar">
-        Cerrar Sesión
-      </button>
-      -->
 </div>
 
 <div class="panel" style="text-align: left; font-size: 16px;">
@@ -48,7 +43,7 @@
             		<th style="width:120px;">2do Nombre</th>
             		<th style="width:120px;">1er Apellido</th>
 					     <th style="width:120px;">2do Apellido</th>
-					     <th style="width:120px;">Password</th>
+					     <th style="width:120px;">contraseña</th>
 					     <th style="width:120px;">Tipo usuario</th>
 					     <th style="width:120px;">Rol</th>
 					     <th style="width:120px;">Programa</th>
@@ -122,22 +117,7 @@
         </script>
 	</div>
   <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-  <center><div id="canvas-container" style="width: 50%;">
-    <div class="panel panel-default" style="background-color: #E5E8E8">
-      <h1 style="text-align: center;">Candidatos Consejo Superior</h1>
-    </div>
-    <br><canvas id="chart" width="500" height="300"></canvas><br>
-  </div></center>
-
-  <br><br><br><br><br>
-  <center><div id="canvas-container" style="width: 50%;">
-    <div class="panel panel-default" style="background-color: #E5E8E8">
-      <h1 style="text-align: center;">Candidatos Consejo Academico</h1>
-    </div>
-    <canvas id="chart2" width="500" height="300"></canvas>
-  </div></center>
-
+  <br><br><br><br><br><br>
   <br><br><br><br><br>
   <center><div id="canvas-container" style="width: 50%;">
     <div class="panel panel-default" style="background-color: #E5E8E8">
@@ -146,12 +126,5 @@
     <canvas id="chart3" width="500" height="300"></canvas>
   </div></center>
 
-  <br><br><br><br><br>
-  <center><div id="canvas-container" style="width: 50%;">
-    <div class="panel panel-default" style="background-color: #E5E8E8">
-      <h1 style="text-align: center;">Candidatos Consejos de Programa</h1>
-    </div>
-    <canvas id="chart4" width="500" height="300"></canvas>
-  </div></center>
 </div>
 <?php } ?>

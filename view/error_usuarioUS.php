@@ -3,9 +3,9 @@
 <html lang="es">
 	<head>
 		<title>Listas</title>
-		
+
 		<!--I     N      H      A      B      I     L      I      T      A         FLECHA ATRAS----------------->
-		<meta http-equiv="Expires" content="0" /> 
+		<meta http-equiv="Expires" content="0" />
 		<meta http-equiv="Pragma" content="no-cache" />
 		<script type="text/javascript">
   		if(history.forward(1)){

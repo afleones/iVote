@@ -5,7 +5,7 @@ class candidato
 
     public $id_candidato;
     public $numero;
-    public $id_organo;
+		public $id_programa;
 		public $id_tipo_usuario;
     public $foto;
 

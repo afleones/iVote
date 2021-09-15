@@ -1,4 +1,4 @@
-<?php 
+<?php
 	include "../conexion.php";
 	$mysqli = getConn();
 	$cod = $_POST['codig'];//traje la variable del ajax declarada en el usuarioUSJU.php
