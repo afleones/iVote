@@ -76,7 +76,7 @@
     ?>
 </div>
 
-<h1 class="page-header"><span class="glyphicon glyphicon-zoom-in"></span> Reporte de escrutinio de mesas</h1>
+<h1 class="page-header"><span class="glyphicon glyphicon-zoom-in"></span> Reporte de Votaciones</h1>
 
 <div class="row"><!--PARA PAGINACIÓN-->
 	<div class="col-md-12"><!--PARA PAGINACIÓN-->
@@ -84,7 +84,10 @@
 		<!---<table class="table table-hover">--><!-- TABLE ORIGINAL table-striped -->
     		<thead>
         		<tr>
-            		<th style="width:80px;">Número de mesa</th>
+								<th style="width:80px;">Facultad</th>
+								<th style="width:80px;">Programa</th>
+								<th style="width:80px;">Tipo Usuario</th>
+								<th style="width:80px;">Candidato</th>
             		<th style="width:80px;">Cantidad de votos</th>
         		</tr>
     		</thead>
@@ -92,15 +95,22 @@
 				<!--INICIO DEL CICLO PARA LISTAR LA TABLA MESAS-->
 				<?php
 					while($mostrar=mysqli_fetch_object($resultado)){
-						$mesas[$i] = $mostrar->id_mesa;
+						$mesas[$i] = $mostrar->facultad;
+						$mesas1[$i] = $mostrar->programa;
+						$mesas4[$i] = $mostrar->tipo_usu;
+						$mesas2[$i] = $mostrar->nombre;
+						$mesas3[$i] = $mostrar->num_votos;
         		?>
         		<tr>
             		<td><?php echo $mesas[$i]; ?></td>
+								<td><?php echo $mesas1[$i]; ?></td>
+								<td><?php echo $mesas4[$i]; ?></td>
+								<td><?php echo $mesas2[$i]; ?></td>
+								<td><?php echo $mesas3[$i]; ?></td>
             		<?php
             			$consulta3 = "SELECT id_mesa, COUNT(*) as num FROM voto WHERE id_mesa = '$mesas[$i]' ORDER BY id_mesa";
-						$resultado3 = mysqli_query($mysqli,$consulta3);
+									$resultado3 = mysqli_query($mysqli,$consulta3);
             			while($mostrar3=mysqli_fetch_object($resultado3)){ ?>
-            		<td><?php echo $mostrar3->num; ?></td>
             		<?php } ?>
         		</tr>
         		<?php $i++;} ?>
@@ -110,7 +120,7 @@
 	</div>
 </div>
 <br><br>
-<h1 class="page-header"><span class="glyphicon glyphicon-hdd"></span> Mesas de votación</h1>
+<h1 class="page-header"><span class="glyphicon glyphicon-hdd"></span>Gráfica</h1>
 	<br>
 <div id="canvas-container" style="width: 100%;">
 	<canvas id="chart" width="100%" height="50%"></canvas>
