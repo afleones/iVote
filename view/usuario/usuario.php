@@ -116,15 +116,5 @@
             }
         </script>
 	</div>
-  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-  <br><br><br><br><br><br>
-  <br><br><br><br><br>
-  <center><div id="canvas-container" style="width: 50%;">
-    <div class="panel panel-default" style="background-color: #E5E8E8">
-      <h1 style="text-align: center;">Candidatos Consejos de Facultad</h1>
-    </div>
-    <canvas id="chart3" width="500" height="300"></canvas>
-  </div></center>
-
 </div>
 <?php } ?>

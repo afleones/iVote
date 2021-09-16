@@ -1,4 +1,4 @@
-<?php 
+<?php
   require_once '../../model/consejoFacultad.php';
   session_start();
   //echo $_SESSION['mesa'];
@@ -10,3 +10,5 @@
     require_once("bodyCF.php");
   }
  ?>
+
+<script type="text/javascript" src="../js/cerrarSUS.js"></script>

@@ -35,11 +35,9 @@
       <?php
         echo $_SESSION["name"] . "  " . $_SESSION["name2"] . "  " . $_SESSION["ape1"] . "  " . $_SESSION["ape2"] . " - " . $_SESSION["id_usuario"];
       ?>
-      <!--OPCIÓN a implementar despues
-      <button onclick="" style="object-position: left;position: relative;left:665px;margin-top: 7px;" class="btn btn-secundary" id="cerrar">
+      <button onclick="cerrarSUS();" style="object-position: left;position: relative;left:730px;margin-top: 7px;" class="btn btn-danger" id="cerrar">
         Cerrar Sesión
       </button>
-      -->
     </div>
 
     <div class="panel" style="text-align: left; font-size: 16px;">
@@ -48,52 +46,39 @@
       ?>
     </div>
 
-    <div class="panel panel-default panel-danger" style="font-size: 18px; height: 450px;">
+    <div class="panel panel-default panel-danger" style="font-size: 18px; height: auto;">
     <div class="panel-heading" style="height: 130px;">
-      <br><center><h1 style="font-size: 45px;"><?php echo $nombreOrgano; ?></h1></center><br><br><br>
+      <br><center><h1 style="font-size: 45px;"><?php echo "$nombreOrgano"; ?></h1></center><br><br><br>
     </div>
     <ul>
       <?php
         for ($k=0;$k<$j;$k++){
           echo "<ul class='col-md-4 list-group list-group-horizontal-xl text-center'>";
           echo "<input class='chk' id='cb$k' name='chk[]' value='$idcandidato[$k]' type='radio' style='visibility:hidden';/>";
-          echo "<label style=' border: 2px solid gray' for='cb$k' >";
+          echo "<label style=' border: 10px solid gray' for='cb$k' >";
           echo "<img style='width: auto;height: auto;' src='../../assets/img/candidatos/$foto[$k]'/>";
-          echo  "<li class='list-group-item text-center'>$nom1[$k] $ape1[$k]</li>";
+          echo  "<li class='list-group-item text-center'>$nom1[$k] $nom2[$k] <br>";
+          echo  "$ape1[$k] $ape2[$k]<br><br>";
+          echo  "'$prog[$k]'</li> <br>";
           echo "</ul>";
         }
       ?>
-
-      <!-- <?php
-        // for ($k=0;$k<$j;$k++){
-        //   echo "<li class='col-md-4 card'>";
-        //   echo "<input class='chk' id='cb$k' name='chk[]' value='$idcandidato[$k]' type='radio' style='visibility:hidden'/>";
-        //   echo "<label for='cb$k'>";
-        //   echo "<img style='width: auto;height: auto; border: 5px solid black; align:center; ' src='../../assets/img/candidatos/$foto[$k]'/>";
-        //   echo "<h4 class='text-center'>";
-        //   echo $nom1[$k] . "<br>";
-        //   echo $ape1[$k] . "<br>";
-        //   echo "</h6></label></li>";
-
-      ?> -->
-      <!--
-      <li class="col-xs-2 list-group-item">
+      <!-- <li class="col-md-4 list-group list-group-horizontal-xl text-center">
         <input class="chk" id="cb102" name="chk[]" value="2013213033" type="checkbox" />
-        <label for="cb102">
-          <img style="width: 100%;height: 150px" src="../../assets/img/candidatos/img9.jpg"/>
+        <label for="cb102" style="border:10px solid gray;">
+          <img style="width: auto;height: auto" src="../../assets/img/candidatos/img9.jpg"/>
           <h6 class="text-center">Voto en blanco</h6>
         </label>
-      </li>
-      -->
+      </li> -->
     </ul>
-    <!--Boton votar-->
-    <div class="d-flex justify-content-center mt-4">
-      <center><button type="button" class="btn btn-danger" id="btn_id" style="font-size: 20px;">VOTAR</button></center>
-    </div>
   </div>
 
 
 
+  </div>
+  <!--Boton votar-->
+  <div class="d-flex justify-content-center mt-4">
+    <center><button type="button" class="btn btn-danger" id="btn_id" style="font-size: 20px;">VOTAR</button></center><br><br><br>
   </div>
   <!-- FIN DIV container mt-4-- >
 
@@ -175,6 +160,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="../../assets/js/bootstrap.min.js"></script>
     <script src="../../assets/js/funcionvoto.js"></script>
-
+    <script src="../../assets/js/cerrarSUS.js"></script>
   </body>
 </html>

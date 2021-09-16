@@ -47,8 +47,8 @@
               </script>';
         	require_once("salir.php");
 		}else{*/
-			$sql = "UPDATE usuario SET id_estado_usuario='3' WHERE codigo = '$correo'";
-			mysqli_query($mysqli,$sql);
+			// $sql = "UPDATE usuario SET id_estado_usuario='3' WHERE codigo = '$correo'";
+			// mysqli_query($mysqli,$sql);
 			session_start();
 			$_SESSION["name"] = $filas["nombre1"];
 			$_SESSION["name2"] = $filas["nombre2"];
@@ -94,8 +94,8 @@
               </script>';
         	require_once("salir.php");
 		}else{*/
-			$sql = "UPDATE usuario SET id_estado_usuario='3' WHERE codigo = '$correo'";
-			mysqli_query($mysqli,$sql);
+			// $sql = "UPDATE usuario SET id_estado_usuario='3' WHERE codigo = '$correo'";
+			// mysqli_query($mysqli,$sql);
 			session_start();
 			$_SESSION["name"] = $filas["nombre1"];
 			$_SESSION["name2"] = $filas["nombre2"];
