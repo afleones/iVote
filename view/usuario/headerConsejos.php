@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <!--I     N      H      A      B      I     L      I      T      A         FLECHA ATRAS----------------->
-    <meta http-equiv="Expires" content="0" /> 
+    <meta http-equiv="Expires" content="0" />
     <meta http-equiv="Pragma" content="no-cache" />
     <script type="text/javascript">
         if(history.forward(1)){
@@ -28,7 +28,7 @@
 
   <!--PARA          SWEET         ALERT           SENCILLOS   -->
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  
+
 
 
   <!--PARA          SWEET         ALERT           CON       BOOTSTRAP   -->

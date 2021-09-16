@@ -34,11 +34,9 @@
       <?php
         echo $_SESSION["name"] . "  " . $_SESSION["name2"] . "  " . $_SESSION["ape1"] . "  " . $_SESSION["ape2"] . " - " . $_SESSION["id_usuario"];
       ?>
-      <!-- OPCIÓN de implementarlo pero a futuro
-      <button onclick="cerrarSesion();" style="object-position: left;position: relative;left:665px;margin-top: 7px;" class="btn btn-secundary" id="cerrar">
+      <button onclick="cerrarSesion();" style="object-position: left;position: relative;left:730px;margin-top: 7px;" class="btn btn-danger" id="cerrar">
         Cerrar Sesión
       </button>
-      -->
     </div>
 
     <div class="panel" style="text-align: left; font-size: 16px;">
@@ -47,26 +45,26 @@
     ?>
     </div>
 
-    <div class="panel panel-primary " style="font-family: 'Ubuntu', sans-serif;font-size: 18px;height: 490px;">
+    <div class="panel panel-default " style="font-family: 'Ubuntu', sans-serif;font-size: 18px;height: 490px;">
     <div class="panel-heading" style="height: 130px;">
-      <br><center><h1 style="font-family: 'Ubuntu', sans-serif;font-size: 45px;">Bienvenido <?php echo $_SESSION["name"]; ?> </h1></center><br><br><br>
+      <br><center><h1 style="font-family: 'Ubuntu', sans-serif;font-size: 45px;">Bienvenido <?php echo $_SESSION["name"], " ", $_SESSION["ape1"]; ?> </h1></center><br><br><br>
     </div>
 
     <br><br>
 
-    <div class="alert alert-info">
-      <strong>Recuerda!</strong> Este proceso solo puede ser realizado una vez.
+    <div class="alert alert-danger">
+      <strong>Recuerda!</strong>Este proceso solo puede ser realizado una vez.
     </div>
 
-    <div class="alert alert-info">
+    <div class="alert alert-danger">
       <strong>No olvides!</strong> Marcar todos los tarjetones.
     </div>
 
-    <div class="alert alert-info">
+    <div class="alert alert-danger">
       <strong>Por último, </strong> Haz tu proceso de votación a conciencia
     </div>
 
-    <center><button class="btn btn-primary center" style="font-family: 'Ubuntu', sans-serif;font-size: 22px;" onclick="window.location.href='consejoFacultad.php'">Siguiente</button></center>
+    <center><button class="btn btn-danger center" style="font-family: 'Ubuntu', sans-serif;font-size: 22px;" onclick="window.location.href='consejoFacultad.php'">Siguiente</button></center>
 
     <ul>
     </ul>

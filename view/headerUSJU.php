@@ -2,9 +2,9 @@
 <html lang="es">
   <head>
     <title>Listas</title>
-    
+
     <!--I     N      H      A      B      I     L      I      T      A         FLECHA ATRAS----------------->
-    <meta http-equiv="Expires" content="0" /> 
+    <meta http-equiv="Expires" content="0" />
     <meta http-equiv="Pragma" content="no-cache" />
     <script type="text/javascript">
      if(history.forward(1)){
@@ -51,3 +51,15 @@
     			</ul>
   			</div>
 		</nav>
+    <div class="panel" style="text-align: left; font-size: 16px;">
+      <?php
+        echo $_SESSION["name"] . "  " . $_SESSION["name2"] . "  " . $_SESSION["ape1"] . "  " . $_SESSION["ape2"] . " - " . $_SESSION["id_usuario"];
+      ?>
+      <!--OPCIÓN a implementar despues
+      <button onclick="" style="object-position: left;position: relative;left:665px;margin-top: 7px;" class="btn btn-secundary" id="cerrar">
+        Cerrar Sesión
+      </button>
+      -->
+      <button class="btn btn-default" onClick="cerrarSJU();" style="margin-top: 5px;font-size: 16px;position:relative;left:720px;">Cerrar Sesión
+      </button>
+</div>

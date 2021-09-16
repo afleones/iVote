@@ -3,6 +3,7 @@
 	require_once '../model/consultMesa.php';
 	require_once '../model/datosGraf.php';
 	require_once '../model/datosGraf_2.php';
+	session_start();
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -63,12 +64,12 @@
     			</ul>
   			</div>
 		</nav>
-
-
-<div class="panel" style="text-align: left; font-size: 16px;">
-    <img src="../assets/img/jurado.png">
-
-</div>
+		<div class="panel" style="text-align: left; font-size: 16px;">
+		        <img src="../assets/img/jurado.png">
+		      <?php
+		        echo $_SESSION["name"] . "  " . $_SESSION["name2"] . "  " . $_SESSION["ape1"] . "  " . $_SESSION["ape2"] . " - " . $_SESSION["id_usuario"];
+		      ?>
+		</div>
 
 <div class="panel" style="text-align: left; font-size: 16px;">
     <?php
@@ -107,11 +108,7 @@
 								<td><?php echo $mesas4[$i]; ?></td>
 								<td><?php echo $mesas2[$i]; ?></td>
 								<td><?php echo $mesas3[$i]; ?></td>
-            		<?php
-            			$consulta3 = "SELECT id_mesa, COUNT(*) as num FROM voto WHERE id_mesa = '$mesas[$i]' ORDER BY id_mesa";
-									$resultado3 = mysqli_query($mysqli,$consulta3);
-            			while($mostrar3=mysqli_fetch_object($resultado3)){ ?>
-            		<?php } ?>
+
         		</tr>
         		<?php $i++;} ?>
         		<!--FIN DEL CICLO PARA LISTAR LA TABLA MESAS-->
@@ -120,69 +117,6 @@
 	</div>
 </div>
 <br><br>
-<h1 class="page-header"><span class="glyphicon glyphicon-hdd"></span>Gráfica</h1>
-	<br>
-<div id="canvas-container" style="width: 100%;">
-	<canvas id="chart" width="100%" height="50%"></canvas>
-	<script>
-		$(document).ready(function(){
-
-        var datos = {
-            labels: [
-            <?php
-            	while($mostrar4=mysqli_fetch_object($resultado4)){ ?>
-					'<?php echo $mostrar4->id_mesa; ?>',
-					<?php
-				}
-            ?>
-            ],
-            datasets: [{
-               label: "Cantidad de votos",
-               backgroundColor: "rgba(172, 97, 160, 0.9)",
-               data: [
-               <?php
-               		while($mostrar5=mysqli_fetch_object($resultado5)){
-               			$mesas5[$s] = $mostrar5->id_mesa;
-               			$consulta6 = "SELECT id_mesa, COUNT(*) as num FROM voto WHERE id_mesa = '$mesas5[$s]' ORDER BY id_mesa";
-						$resultado6 = mysqli_query($mysqli,$consulta6);
-        				while($mostrar6=mysqli_fetch_object($resultado6)){
-               	?>
-               	'<?php echo $mostrar6->num; ?>',
-
-               <?php $s++; }} ?>
-               ]
-            },
-            ]
-         };
-
-         var canvas = document.getElementById('chart').getContext('2d');
-         window.bar = new Chart(canvas, {
-            type: "bar",
-            data: datos,
-            options: {
-               elements: {
-                  rectangle: {
-                     borderWidth: 1,
-                     borderColor: "rgb(172, 97, 160, 0.9)",
-                     borderSkipped: 'bottom'
-                  }
-               },
-               responsive: true,
-               title: {
-                  display: true,
-                  text: "Votos por mesa",
-               }
-            }
-         });
-
-   		function getRandom(){
-   			return Math.round(Math.random() * 100);
-   		}
-
-	});
-
-	</script>
-</div>
 
 <script src="../assets/js/jquery.min.js"></script>
 <script src="../assets/js/jquery-1.11.2.min.js"></script>

@@ -1,4 +1,8 @@
 <?php
+// Desactivar toda las notificaciónes del PHP
+error_reporting(0);
+?>
+<?php
 	session_start();
 	include "conexion.php";
 	$mysqli = getConn();
@@ -32,7 +36,7 @@
 												usuario.nombre2,
 												usuario.apellido1,
 												usuario.apellido2,
-												programa.nombre,
+												programa.nombre AS prog,
 												facultad.nombre FROM usuario
 												INNER JOIN tipo_usuario ON usuario.id_tipo_usuario = tipo_usuario.id_tipo_usuario
 												INNER JOIN candidato ON candidato.id_candidato = usuario.codigo
@@ -48,6 +52,7 @@
     		$nom2[$j] = $mostrar->nombre2;
     		$ape1[$j] = $mostrar->apellido1;
     		$ape2[$j] = $mostrar->apellido2;
+				$prog[$j] = $mostrar->prog;
     		$num[$j] = $mostrar->numero;
     		$j++;
   		}
