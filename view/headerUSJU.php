@@ -28,6 +28,7 @@
    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"> <!--en css font-family: 'Ubuntu', sans-serif;-->
    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
    <script src="http://code.jquery.com/jquery-latest.js"></script>
+   <script src="../assets/js/cerrarSJU.js"></script>
 
     <style type="text/css">
       *{
@@ -45,21 +46,11 @@
       				<a class="navbar-brand" style="font-size: 20px;">Jurado</a>
     			</div>
     			<ul class="nav navbar-nav">
-      				<li style="font-size: 16px;"><a href="../view/indexUSJU.php">Usuarios</a></li><!--Elimine class active del <li>-->
-      				<li><a href="../view/listaMesas.php">Reporte de votos</a></li>
+      				<li><a href="../view/listaMesas.php" class="btn active">Reporte de votos</a></li>
       				<!--<li><a href="#">Page 3</a></li>-->
     			</ul>
   			</div>
 		</nav>
     <div class="panel" style="text-align: left; font-size: 16px;">
-      <?php
-        echo $_SESSION["name"] . "  " . $_SESSION["name2"] . "  " . $_SESSION["ape1"] . "  " . $_SESSION["ape2"] . " - " . $_SESSION["id_usuario"];
-      ?>
-      <!--OPCIÓN a implementar despues
-      <button onclick="" style="object-position: left;position: relative;left:665px;margin-top: 7px;" class="btn btn-secundary" id="cerrar">
-        Cerrar Sesión
-      </button>
-      -->
-      <button class="btn btn-default" onClick="cerrarSJU();" style="margin-top: 5px;font-size: 16px;position:relative;left:720px;">Cerrar Sesión
-      </button>
+
 </div>

@@ -11,7 +11,7 @@
 <html lang="es">
 <head>
   <!--I     N      H      A      B      I     L      I      T      A         FLECHA ATRAS----------------->
-    <meta http-equiv="Expires" content="0" /> 
+    <meta http-equiv="Expires" content="0" />
     <meta http-equiv="Pragma" content="no-cache" />
     <script type="text/javascript">
         if(history.forward(1)){
@@ -20,7 +20,7 @@
     </script>
     <!--I     N      H      A      B      I     L      I      T      A         FLECHA ATRAS----------------->
   <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"> <!--en css font-family: 'Ubuntu', sans-serif;-->
-  
+
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -34,7 +34,7 @@
       font-family: 'Ubuntu', sans-serif;
     }
   </style>
-  
+
   <!--PARA          SWEET         ALERT           SENCILLOS   -->
       <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <!--PARA          SWEET         ALERT           CON       BOOTSTRAP   -->
@@ -67,7 +67,7 @@
         <img class="logo" src="../../assets/img/logo_derecha.jpg" style="width: 80px;height: 50px;" />
       </div>
     </div>
-    
+
     <br>
     <!--ALERTA          POR NO INICIO         DE      SESION-->
     <div class="panel panel-primary" style="text-align: center;">Vista no está disponible.<br>

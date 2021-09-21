@@ -9,14 +9,14 @@ function cerrarSJU(){
 		.then((willDelete) => {
 		if (willDelete) {
 			swal(" ", {
-				icon: "success",
+				icon: "warning",
 				title: "En segundos saldrá del sistema! ",
 			});
 			setTimeout("location.href='../model/desconectar.php'", 1500);
 			}else{
 				swal("Solicitud cancelada!", " ", "error");
 				//mandar a recargar la pagina
-				setTimeout("location.href='../view/indexUSJU.php'", 1000);
+				setTimeout("location.href='../view/listaMesas.php'", 1000);
 			}
 		});
 	//window.close();

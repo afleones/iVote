@@ -4,7 +4,7 @@
   require_once '../model/database.php';
   session_start();
   if( ($_SESSION["idrol"]) != 'J' ){
-      require_once '../view/error_usuarioUSJU.php';// este se muestra cuando quieren acceder a la vista 
+      require_once '../view/error_usuarioUSJU.php';// este se muestra cuando quieren acceder a la vista
   }else{
     //Para registrar candidatos es necesario iniciar los usuarios
     //de los mismos, por ello la variable controller para este
@@ -25,7 +25,7 @@
       // Obtiene el controlador a cargar
       $controller = strtolower($_REQUEST['c']);
       $accion = isset($_REQUEST['a']) ? $_REQUEST['a'] : 'IndexUJU';
-  
+
       // Instancia el controlador
       require_once "../controller/$controller.controller.php";
       $controller = ucwords($controller) . 'Controller';
