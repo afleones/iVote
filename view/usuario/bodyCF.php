@@ -1,3 +1,4 @@
+
 <body>
   <!-- INICIO DIV container mt-4 -->
   <div class="container mt-4">
@@ -48,7 +49,7 @@
 
     <div class="panel panel-default panel-danger" style="font-size: 18px; height: auto;">
     <div class="panel-heading" style="height: 130px;">
-      <br><center><h1 style="font-size: 45px;"><?php echo "$nombreOrgano"; ?></h1></center><br><br><br>
+      <br><center><h1 style="font-size: 45px;">Facultad de <?php echo "$nombreFacultad"; ?></h1></center><br><br><br>
     </div>
     <ul>
       <?php
@@ -59,7 +60,11 @@
           echo "<img style='width: auto;height: auto;' src='../../assets/img/candidatos/$foto[$k]'/>";
           echo  "<li class='list-group-item text-center'>$nom1[$k] $nom2[$k] <br>";
           echo  "$ape1[$k] $ape2[$k]<br><br>";
-          echo  "'$prog[$k]'</li> <br>";
+            if(empty($prog[$k])) {
+              echo "<br><br><br><br>";
+            }else {
+              echo  "Programa: <br>   $prog[$k]</li><br>";
+            };
           echo "</ul>";
         }
       ?>

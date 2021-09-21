@@ -1,6 +1,6 @@
 <?php
 // Desactivar toda las notificaciónes del PHP
-error_reporting(0);
+//error_reporting(0);
 ?>
 <?php
 	session_start();
@@ -62,6 +62,12 @@ error_reporting(0);
     while($mostrar2=mysqli_fetch_object($resultado2)){
       $nombreOrgano = $mostrar2->nombre;
     }
+
+		$consulta3 = "SELECT nombre FROM Facultad WHERE id_facultad = ".$_SESSION["fac"]." ";
+		$resultado3 = mysqli_query($mysqli,$consulta3); $a=0;
+		while($mostrar3=mysqli_fetch_object($resultado3)){
+			$nombreFacultad = $mostrar3->nombre;
+		}
 	//echo "<br>Numero de candidatos: " . $j;
 	//echo $miarray[0];
 	//echo "<br>";

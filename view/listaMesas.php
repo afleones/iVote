@@ -58,8 +58,7 @@
       				<a class="navbar-brand" style="font-size: 20px;">Jurado</a>
     			</div>
     			<ul class="nav navbar-nav">
-      				<li style="font-size: 16px;"><a href="../view/indexUSJU.php">Usuarios</a></li><!--Elimine class active del <li>-->
-      				<li><a href="../view/listaMesas.php">Reporte de votos</a></li>
+      				<li style="font-size: 16px;"><a href="../view/listaMesas.php" class="btn active">Reporte de votos</a></li><!--Elimine class active del <li>-->
       				<!--<li><a href="#">Page 3</a></li>-->
     			</ul>
   			</div>
@@ -71,25 +70,28 @@
 		      ?>
 		</div>
 
-<div class="panel" style="text-align: left; font-size: 16px;">
-    <?php
-        echo $time2 . ', '; echo date("g:i a", strtotime($time1));
-    ?>
-</div>
-
+		<div class="panel" style="text-align: left; font-size: 16px;">
+		    <?php
+		        echo $time2 . ', '; echo date("g:i a", strtotime($time1));
+		    ?>
+		    <div style="float: right;margin-top: -15px;">
+		        <button class="btn btn-danger" onClick="cerrarSJU();" style="font-size: 16px;"><i class="fa fa-power-off" aria-hidden="true"></i>   Cerrar Sesión
+		        </button>
+		    </div>
+		</div>
 <h1 class="page-header"><span class="glyphicon glyphicon-zoom-in"></span> Reporte de Votaciones</h1>
 
 <div class="row"><!--PARA PAGINACIÓN-->
 	<div class="col-md-12"><!--PARA PAGINACIÓN-->
-		<center><table id="example" class="table table-striped table-bordered table-hover " cellspacing="0" width="50%">
+		<center><table id="example" class="table table-striped table-bordered table-hover " cellspacing="0" width="100%">
 		<!---<table class="table table-hover">--><!-- TABLE ORIGINAL table-striped -->
     		<thead>
         		<tr>
-								<th style="width:80px;">Facultad</th>
-								<th style="width:80px;">Programa</th>
-								<th style="width:80px;">Tipo Usuario</th>
-								<th style="width:80px;">Candidato</th>
-            		<th style="width:80px;">Cantidad de votos</th>
+								<th style="width:auto;">Facultad</th>
+								<th style="width:auto;">Programa</th>
+								<th style="width:auto;">Tipo Usuario</th>
+								<th style="width:auto;">Candidato</th>
+            		<th style="width:auto;">Cantidad de votos</th>
         		</tr>
     		</thead>
     		<tbody>
@@ -102,22 +104,25 @@
 						$mesas2[$i] = $mostrar->nombre;
 						$mesas3[$i] = $mostrar->num_votos;
         		?>
-        		<tr>
-            		<td><?php echo $mesas[$i]; ?></td>
-								<td><?php echo $mesas1[$i]; ?></td>
-								<td><?php echo $mesas4[$i]; ?></td>
-								<td><?php echo $mesas2[$i]; ?></td>
-								<td><?php echo $mesas3[$i]; ?></td>
+						<?php if ($mesas3[$i] == 0): ?>
 
-        		</tr>
+						<?php else: ?>
+							<tr>
+									<td><?php echo $mesas[$i]; ?></td>
+									<td><?php echo $mesas1[$i]; ?></td>
+									<td><?php echo $mesas4[$i]; ?></td>
+									<td><?php echo $mesas2[$i]; ?></td>
+									<td><?php echo $mesas3[$i]; ?></td>
+
+							</tr>
+						<?php endif; ?>
+
         		<?php $i++;} ?>
         		<!--FIN DEL CICLO PARA LISTAR LA TABLA MESAS-->
     		</tbody>
 		</table></center>
 	</div>
 </div>
-<br><br>
-
 <script src="../assets/js/jquery.min.js"></script>
 <script src="../assets/js/jquery-1.11.2.min.js"></script>
 <!-- SCRIPTS DE PAGINACION-->
@@ -129,6 +134,7 @@
 <script src="../assets/js/jquery-ui/jquery-ui.min.js"></script>
 <script src="../assets/js/ini.js"></script>
 <script src="../assets/js/jquery.anexsoft-validator.js"></script>
+<script src="../assets/js/cerrarSJU.js"></script>
 
 <div class="row">
     <div class="col-xs-12">

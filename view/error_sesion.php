@@ -24,42 +24,51 @@
       font-family: 'Ubuntu', sans-serif;
     }
   </style>
-    <title>Elecciones</title>
-  </head>
-  <body class="" style="background-image: url('../assets/img/fondo.jpeg');">
-  <div class="container contenido" style="background-color: white;">
-    <!--CONTENIDO--> <!--CONTENIDO--> <!--CONTENIDO--> <!--CONTENIDO--> <!--CONTENIDO-->
-    <!--CONTENIDO--> <!--CONTENIDO--> <!--CONTENIDO--> <!--CONTENIDO--> <!--CONTENIDO-->
-    <!--CONTENIDO--> <!--CONTENIDO--> <!--CONTENIDO--> <!--CONTENIDO--> <!--CONTENIDO-->
-    <!--CONTENIDO--> <!--CONTENIDO--> <!--CONTENIDO--> <!--CONTENIDO--> <!--CONTENIDO-->
+  <title>Elecciones</title>
+</head>
+<body class="" style="background-image: url('../assets/img/santillana.jpg');">
+<div class="container contenido">
+  <div class="col-md-12" style="float: left;background-image: url('../assets/img/.png');height: 730px;">
+    <br><br>
+  <section id="login">
+  <div class="container text-center">
+    <div class="row" style="width:auto;">
+      <div class="col-md-4">
 
-    <div class="col-md-12" style="float: left;background-image: url('../assets/img/.png');height: 730px;">
-    <section id="login">
-    <span><h1 style="font-size: 40px; ">Acceso a usuarios</h1></span>
-    <div class="container text-center" style="">
-      <div class="row" style="width: 100%;">
-        <br><br><br>
-        <div class="col-md-6 modal-content animate" style="width: 30%;margin-left: 382px;" >
-          <div class="form-wrap" style="width: 300px;height: 500px;">
-            <br><br>
-            <img class="img_login" src="../assets/img/section_login.png" style="height: 200px;width: 200px;" alt="">
-              <!-- formulario -->
-              <form role="form" action="model/acceder.php" method="post" >
-                <div class="form-group">
-                  <label for="codigo" class="sr-only">Código</label>
-                  <input type="text" name="codigo"  class="form-control" placeholder="Código" required="">
-                </div>
+      </div>
+      <div class="col-md-4 modal-content animate" style="width: auto;margin-left:33px; border-color: red;">
+        <div class="login" style="width: auto;height:auto;">
+          <br><br>
+          <img class="img_login" src="../assets/img/section_login.png" style="height: 200px;width: 200px;" alt="">
+            <!-- formulario -->
+            <form class="form-group" role="form" action="model/acceder.php" method="post" >
+              <div class="form-group">
+                <label for="codigo" class="sr-only">Código</label>
+                <input type="text" name="codigo"  class="form-control" placeholder="Código Estudiantil" required="true">
+              </div>
 
-                <div class="form-group">
-                  <label for="password" class="sr-only">Password</label>
-                  <input type="password" name="password"  class="form-control" placeholder="Password" required="">
-                </div>
+              <div class="form-group">
+                <label for="password" class="sr-only">Contraseña</label>
+                <input type="password" name="password" id="password" class="form-control" placeholder="Contraseña(Documento)" required="true">
+                <span class="fa fa-fw fa-eye password-icon show-password"></span>
+                <input type="checkbox" onclick="verpassword()"> Mostrar contraseña
+              </div>
 
-                <button type="submit" name="button" class="btn btn-danger">Ingresar</button>
-              </form><br><br><br><br><br><br><br><br><br><br><br>
-              <!--<a href="views/registrar.php">Registrarte</a>-->
-          </div> <!-- /.col-md-12 -->
-        </div>
+              <div class="form-group">
+                <label for="id_tipo_usuario" class="sr-only">Tipo de Usuario</label>
+                <select class="form-control" name="id_tipo_usuario" id="id_tipo_usuario" required>
+                    <option value="" style="display:none;">Elige Tipo de Usuario</option>
+                    <option value="EST" >Estudiante</option>
+                    <option value="DOC">Docente</option>
+                    <option value="EGR">Egresado</option>
+                </select>
+              </div>
+              <button type="submit" name="button" class="btn btn-danger">Ingresar</button>
+        </div> <!-- /.col-md-12 -->
+      </div>
+      <div class="col-md-4">
+
+      </div>
       </div> <!-- /.row -->
     </div> <!-- /.container -->
   </section>

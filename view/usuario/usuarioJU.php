@@ -7,6 +7,12 @@
     }else{//esta opcion si se necesita para cuando el jurado ya tenga una sesion activa
         require_once '../model/reloj.php';
 ?>
+<?php
+require_once '../model/reloj.php';
+require_once '../model/consultMesa.php';
+require_once '../model/datosGraf.php';
+require_once '../model/datosGraf_2.php';
+ ?>
 
 <div class="panel" style="text-align: left; font-size: 16px;">
     <img src="../assets/img/jurado.png">
@@ -25,86 +31,52 @@
         echo $time2 . ', '; echo date("g:i a", strtotime($time1));
     ?>
     <div style="float: right;margin-top: -15px;">
-        <button class="btn btn-default" onClick="cerrarSJU();" style="font-size: 16px;"><i class="fa fa-power-off" aria-hidden="true"></i>   Cerrar Sesión
+        <button class="btn btn-danger" onClick="cerrarSJU();" style="font-size: 16px;"><i class="fa fa-power-off" aria-hidden="true"></i>   Cerrar Sesión
         </button>
     </div>
 </div>
 
-<h1 class="page-header"><span class="glyphicon glyphicon-user"></span>Lista de Usuarios</h1>
-<?php $cont=1; $cont2=1; ?>
+<h1 class="page-header"><span class="glyphicon glyphicon-zoom-in"></span> Reporte de Votaciones</h1>
 <div class="row"><!--PARA PAGINACIÓN-->
 	<div class="col-md-12"><!--PARA PAGINACIÓN-->
-		<table id="example" class="table table-striped table-bordered table-hover " cellspacing="0" width="100%">
+		<center><table id="example" class="table table-striped table-bordered table-hover " cellspacing="0" width="100%">
 		<!---<table class="table table-hover">--><!-- TABLE ORIGINAL table-striped -->
     		<thead>
         		<tr>
-            		<th style="width:180px;">Código</th>
-            		<th style="width:120px;">1er Nombre</th>
-            		<th style="width:120px;">2do Nombre</th>
-            		<th style="width:120px;">1er Apellido</th>
-      					<th style="width:120px;">2do Apellido</th>
-      					<th style="width:120px;">Password</th>
-      					<th style="width:120px;">Tipo usuario</th>
-      					<th style="width:120px;">Rol</th>
-      					<th style="width:120px;">Programa</th>
-      					<th style="width:120px;">Mesa</th>
-      					<th style="width:120px;">Estado</th>
-      					<th><i class="fa fa-check" aria-hidden="true"></i></th>
-      					<th><i class="fa fa-times" aria-hidden="true"></i></th>
+								<th style="width:auto;">Facultad</th>
+								<th style="width:auto;">Programa</th>
+								<th style="width:auto;">Tipo Usuario</th>
+								<th style="width:auto;">Candidato</th>
+            		<th style="width:auto;">Cantidad de votos</th>
         		</tr>
     		</thead>
     		<tbody>
-				<!--INICIO DEL CICLO PARA LISTAR LA TABLA USUARIO-->
-    			<?php foreach($this->model->Listar() as $r): ?>
-        		<tr>
-            		<td><?php echo $r->codigo; ?></td>
-            		<td><?php echo $r->nombre1; ?></td>
-            		<td><?php echo $r->nombre2; ?></td>
-            		<td><?php echo $r->apellido1; ?></td>
-      					<td><?php echo $r->apellido2; ?></td>
-      					<td><?php echo $r->password; ?></td>
-      					<td><?php echo $r->id_tipo_usuario; ?></td>
-      					<td><?php echo $r->id_rol; ?></td>
-      					<td><?php echo $r->id_programa; ?></td>
-      					<td><?php echo $r->id_mesa; ?></td>
-      					<td><?php echo $r->id_estado_usuario; ?></td>
+				<!--INICIO DEL CICLO PARA LISTAR LA TABLA MESAS-->
+				<?php
+					while($mostrar=mysqli_fetch_object($resultado)){
+						$mesas[$i] = $mostrar->facultad;
+						$mesas1[$i] = $mostrar->programa;
+						$mesas4[$i] = $mostrar->tipo_usu;
+						$mesas2[$i] = $mostrar->nombre;
+						$mesas3[$i] = $mostrar->num_votos;
+        		?>
+						<?php if ($mesas3[$i] == 0): ?>
 
-                    <td>
-                        <?php $code = $r->codigo; $state = $r->id_estado_usuario; $prog = $r->id_programa; $rolID = $r->id_rol; ?>
-                		<button class="btn btn-success" id="success<?php echo $cont?>" onclick="funcion_autorizar(<?php echo $code ?>, <?php echo $state ?>, '<?php echo $rolID ?>')">
-                            <i class="fa fa-check" aria-hidden="true"></i>
-                        </button>
-            		</td>
+						<?php else: ?>
+							<tr>
+									<td><?php echo $mesas[$i]; ?></td>
+									<td><?php echo $mesas1[$i]; ?></td>
+									<td><?php echo $mesas4[$i]; ?></td>
+									<td><?php echo $mesas2[$i]; ?></td>
+									<td><?php echo $mesas3[$i]; ?></td>
+							</tr>
+						<?php endif; ?>
 
-                    <?php $cont++; ?>
-
-                    <td>
-                		<button class="btn btn-danger" id="danger<?php echo $cont2?>" onclick="funcion_desautorizar(<?php echo $code ?>, <?php echo $state ?>, '<?php echo $rolID ?>')">
-                            <i class="fa fa-times" aria-hidden="true"></i>
-                        </button>
-            		</td>
-
-                    <?php $cont2++; ?>
-
-        		</tr>
-				<!--FIN DEL CICLO PARA LISTAR LA TABLA USUARIO-->
-    			<?php endforeach; ?>
+        		<?php $i++;} ?>
+        		<!--FIN DEL CICLO PARA LISTAR LA TABLA MESAS-->
     		</tbody>
-		</table>
+		</table></center>
 	</div>
 </div>
-
-<!--CONDICIÓN PARA DESAHIBILITAR LOS BOTONES DE AUTORIZAR ENTRE LAS 12:00 AM Y 7:59 AM-->
-<!--CONDICIÓN PARA DESAHIBILITAR LOS BOTONES DE AUTORIZAR ENTRE LAS 4:00 PM Y 11:59 PM-->
-<?php
-if( ($hora<$inicioAM_2 && $zona=='am') || ($hora>$inicioPM && $zona=='pm') ){
-
-        while($cont!=0 || $cont2!=0){
-            echo "<script> $('#success$cont').attr('disabled', true); </script>"; $cont--;
-            echo "<script> $('#danger$cont2').attr('disabled', true); </script>"; $cont2--;
-        }
-
-}
-?>
-
 <?php } ?>
+<script src="../assets/js/cerrarSJU.js"></script>

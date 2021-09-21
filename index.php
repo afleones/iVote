@@ -4,6 +4,7 @@
   require_once 'model/datosGraf_4.php';
   require_once 'model/datosGraf_5.php';
   require_once 'model/datosGraf_6.php';
+	$mysqli = getConn();
 ?>
 <!doctype html>
 <html lang="es">
@@ -18,14 +19,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
   	<link rel="icon" type="image/png" href="assets/img/favicon.ico"/>
   	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"> <!--en css font-family: 'Ubuntu', sans-serif;-->
-  	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script type="text/javascript" src="assets/js/Chart.js"></script>
-    <script type="text/javascript" src="assets/js/Chart.min.js"></script>
-    <script type="text/javascript" src="assets/js/Chart.bundle.js"></script>
-    <script type="text/javascript" src="assets/js/Chart.bundle.min.js"></script><!--GRAFICA-->
-    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
-      </script>
+
 
   <style type="text/css">
     *{
@@ -38,8 +32,8 @@
   <body class="" style="background-image: url('assets/img/santillana.jpg');">
 	<div class="container contenido">
     <div class="col-md-12" style="float: left;background-image: url('assets/img/.png');height: 730px;">
+      <br><br>
     <section id="login">
-    <span><h1 style="font-size: 40px; color:black; ">Acceso a usuarios</h1></span>
     <div class="container text-center">
       <div class="row" style="width:auto;">
         <div class="col-md-4">
@@ -58,9 +52,20 @@
 
                 <div class="form-group">
                   <label for="password" class="sr-only">Contraseña</label>
-                  <input type="password" name="password"  class="form-control" placeholder="Contraseña(Documento)" required="true">
+                  <input type="password" name="password" id="password" class="form-control" placeholder="Contraseña(Documento)" required="true">
+                  <span class="fa fa-fw fa-eye password-icon show-password"></span>
+                  <input type="checkbox" onclick="verpassword()"> Mostrar contraseña
                 </div>
 
+                <div class="form-group">
+                  <label for="id_tipo_usuario" class="sr-only">Tipo de Usuario</label>
+                  <select class="form-control" name="id_tipo_usuario" id="id_tipo_usuario" required>
+                      <option value="" style="display:none;">Elige Tipo de Usuario</option>
+                      <option value="EST" >Estudiante</option>
+                      <option value="DOC">Docente</option>
+                      <option value="EGR">Egresado</option>
+                  </select>
+                </div>
                 <button type="submit" name="button" class="btn btn-danger">Ingresar</button>
           </div> <!-- /.col-md-12 -->
         </div>
@@ -79,11 +84,17 @@
       <footer class="footer-distributed"></footer>
     </div>
   </div>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/funcionlogin.js"></script>
-
+    <script src="assets/js/verPassword.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script type="text/javascript" src="assets/js/Chart.js"></script>
+    <script type="text/javascript" src="assets/js/Chart.min.js"></script>
+    <script type="text/javascript" src="assets/js/Chart.bundle.js"></script>
+    <script type="text/javascript" src="assets/js/Chart.bundle.min.js"></script><!--GRAFICA-->
+    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
 	</div>
 
   </body>

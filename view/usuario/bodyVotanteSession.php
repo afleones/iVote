@@ -53,11 +53,11 @@
     <br><br>
 
     <div class="alert alert-danger">
-      <strong>Recuerda!</strong>Este proceso solo puede ser realizado una vez.
+      <strong>Recuerda! </strong>Este proceso solo puede ser realizado una vez.
     </div>
 
     <div class="alert alert-danger">
-      <strong>No olvides!</strong> Marcar todos los tarjetones.
+      <strong>No olvides!</strong> Escoge el candidato de tu preferencia.
     </div>
 
     <div class="alert alert-danger">

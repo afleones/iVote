@@ -11,7 +11,12 @@
 <div class="panel" style="text-align: left; font-size: 16px;">
         <img src="../assets/img/admin.png">
       <?php
-        echo $_SESSION["name"] . "  " . $_SESSION["name2"] . "  " . $_SESSION["ape1"] . "  " . $_SESSION["ape2"] . " - " . $_SESSION["id_usuario"] . " - " .$_SESSION["tipouser"];
+        echo $_SESSION["name"]. "
+         "  .$_SESSION["name2"]. "
+         "  .$_SESSION["ape1"]. "
+         "  .$_SESSION["ape2"]. " -
+         "  .$_SESSION["id_usuario"]. " -
+         "  .$_SESSION["tipouser"];
       ?>
 </div>
 
