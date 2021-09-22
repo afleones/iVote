@@ -5,11 +5,9 @@
       <div class="col-sm-2">
         <img class="logo" src="../../assets/img/logo_izquierda.png"/>
       </div>
-      <div class="col-sm-8 mt-4">
+      <div class="col-sm-12 mt-4">
         <h2 class="text-center ml-4">
-          <b>
-            ELECCIONES PARA EL CONSEJO DE FACULTAD UNISINU CARTAGENA
-          </b>
+        <img class="img-responsive" src="../../assets/img/banner.jpg" alt="banner Unisinu">
         </h2>
       </div>
       <div class="col-sm-2">

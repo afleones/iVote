@@ -18,6 +18,7 @@
   <link rel="icon" type="image/png" href="../../assets/img/favicon.ico"/>
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../assets/css/style.css">
   <link rel="stylesheet" href="../../assets/css/style_votar.css">
   <title>Inicio Votante</title>
 </head>

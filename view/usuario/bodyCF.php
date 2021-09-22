@@ -2,42 +2,30 @@
   <!-- INICIO DIV container mt-4 -->
   <div class="container mt-4">
     <div class="row">
-      <div class="col-sm-2">
-        <img class="logo" src="../../assets/img/logo_izquierda.png"/>
-      </div>
-      <div class="col-sm-8 mt-4">
+      <div class="col-sm-12 mt-4">
         <h2 class="text-center ml-4">
-          <b>
-            ELECCIONES PARA EL CONSEJO DE FACULTAD UNISINU CARTAGENA
-          </b>
+        <img class="img-responsive" src="../../assets/img/banner.jpg" alt="banner Unisinu">
         </h2>
       </div>
-      <div class="col-sm-2">
-        <img class="logo" src="../../assets/img/logo_derecha.jpg" style="width: 80px;height: 50px;" />
-      </div>
     </div>
-
-    <br>
-
     <nav class="navbar navbar-default">
         <div class="container-fluid">
           <div class="navbar-header">
-              <a style="font-size: 20px;" class="navbar-brand" href="">Votante</a>
+              <a style="font-size: 20px;" class="navbar-brand" href="">  <?php
+                  echo $_SESSION["name"] . "  " . $_SESSION["name2"] . "  " . $_SESSION["ape1"] . "  " . $_SESSION["ape2"] . " - " . $_SESSION["id_usuario"];
+                ?></a>
+                <a style="font-size: 20px;" class="navbar-brand" href="#"><button onclick="cerrarSUS();" style="margin-top: -7px;" class="btn btn-danger" id="cerrar">
+                  Cerrar Sesión
+                </button></a>
           </div>
           <ul class="nav navbar-nav">
               <li style="font-size: 16px;" class="active"><a href="consejoFacultad.php">Consejos de Facultad</a></li>
-              <li style="font-size: 16px;"><a href=""></a></li>
           </ul>
         </div>
     </nav>
 
     <div class="panel" style="text-align: left; font-size: 16px;">
-      <?php
-        echo $_SESSION["name"] . "  " . $_SESSION["name2"] . "  " . $_SESSION["ape1"] . "  " . $_SESSION["ape2"] . " - " . $_SESSION["id_usuario"];
-      ?>
-      <button onclick="cerrarSUS();" style="object-position: left;position: relative;left:730px;margin-top: 7px;" class="btn btn-danger" id="cerrar">
-        Cerrar Sesión
-      </button>
+
     </div>
 
     <div class="panel" style="text-align: left; font-size: 16px;">
@@ -46,9 +34,9 @@
       ?>
     </div>
 
-    <div class="panel panel-default panel-danger" style="font-size: 18px; height: auto;">
-    <div class="panel-heading" style="height: 130px;">
-      <br><center><h1 style="font-size: 45px;">Facultad de <?php echo "$nombreFacultad"; ?></h1></center><br><br><br>
+    <div class="panel panel-default panel-danger" style="font-size: auto; height: auto;">
+    <div class="panel-heading" style="height: auto;">
+        <br><center><h1 style="font-size: auto;">Consejo de Facultad <?php echo "'$nombreFacultad'"; ?></h1></center><br><br><br>
     </div>
     <ul>
       <?php
@@ -164,6 +152,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="../../assets/js/bootstrap.min.js"></script>
     <script src="../../assets/js/funcionvoto.js"></script>
-    <script src="../../assets/js/cerrarSUS.js"></script>
+    <script src="../../assets/js/cerrarVot.js"></script>
   </body>
 </html>

@@ -1,43 +1,29 @@
 <body>
   <!-- INICIO DIV container mt-4 -->
+
   <div class="container mt-4">
     <div class="row">
-      <div class="col-sm-2">
-        <img class="logo" src="../../assets/img/logo_izquierda.png"/>
-      </div>
-      <div class="col-sm-8 mt-4">
+      <div class="col-sm-12 mt-4">
         <h2 class="text-center ml-4">
-          <b>
-            ELECCIONES PARA EL CONSEJO DE FACULTAD UNISINU CARTAGENA
-          </b>
+            <img class="img-responsive" src="../../assets/img/banner.jpg" alt="banner Unisinu">
         </h2>
       </div>
-      <div class="col-sm-2">
-        <img class="logo" src="../../assets/img/logo_derecha.jpg" style="width: 80px;height: 50px;" />
-      </div>
     </div>
-
-    <br>
     <nav class="navbar navbar-default">
         <div class="container-fluid">
           <div class="navbar-header">
-              <a style="font-size: 20px;" class="navbar-brand" href="formvotacion.php">Votante</a>
+              <a style="font-size: 20px;" class="navbar-brand" href="">  <?php
+                  echo $_SESSION["name"] . "  " . $_SESSION["name2"] . "  " . $_SESSION["ape1"] . "  " . $_SESSION["ape2"] . " - " . $_SESSION["id_usuario"];
+                ?></a>
+                <a style="font-size: 20px;" class="navbar-brand" href="#"><button onclick="sessionVot();" style="margin-top: -7px;" class="btn btn-danger" id="cerrar">
+                  Cerrar Sesión
+                </button></a>
           </div>
           <ul class="nav navbar-nav">
-              <li style="font-size: 16px;"><a href="">Consejos de Facultad</a></li>
-              <li style="font-size: 16px;"><a href=""><!--contenido--></a></li>
+              <li style="font-size: 16px;" class="active"><a href="consejoFacultad.php">Consejos de Facultad</a></li>
           </ul>
         </div>
     </nav>
-
-    <div class="panel" style="text-align: left; font-size: 16px;">
-      <?php
-        echo $_SESSION["name"] . "  " . $_SESSION["name2"] . "  " . $_SESSION["ape1"] . "  " . $_SESSION["ape2"] . " - " . $_SESSION["id_usuario"];
-      ?>
-      <button onclick="cerrarSesion();" style="object-position: left;position: relative;left:730px;margin-top: 7px;" class="btn btn-danger" id="cerrar">
-        Cerrar Sesión
-      </button>
-    </div>
 
     <div class="panel" style="text-align: left; font-size: 16px;">
     <?php

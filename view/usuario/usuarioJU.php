@@ -13,7 +13,6 @@ require_once '../model/consultMesa.php';
 require_once '../model/datosGraf.php';
 require_once '../model/datosGraf_2.php';
  ?>
-
 <div class="panel" style="text-align: left; font-size: 16px;">
     <img src="../assets/img/jurado.png">
       <?php

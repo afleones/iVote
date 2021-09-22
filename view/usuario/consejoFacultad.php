@@ -10,5 +10,3 @@
     require_once("bodyCF.php");
   }
  ?>
-
-<script type="text/javascript" src="../js/cerrarSUS.js"></script>
