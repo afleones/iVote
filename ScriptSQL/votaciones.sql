@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 10-09-2021 a las 18:41:59
+-- Tiempo de generación: 21-09-2021 a las 17:42:39
 -- Versión del servidor: 10.4.17-MariaDB
 -- Versión de PHP: 8.0.2
 
@@ -38,15 +38,25 @@ CREATE TABLE `candidato` (
 -- Volcado de datos para la tabla `candidato`
 --
 
-INSERT INTO `candidato` (`id_candidato`, `numero`, `id_organo`, `foto`) VALUES
-(73153886, '101', 1, '73153886.jpg'),
-(1143263398, '201', 2, '1143263398.jpg'),
-(2010020220, '301', 3, '2010020220.jpg'),
-(2010123112, '102', 1, '2010123112.jpg'),
-(2012111229, '202', 2, '2012111229.jpg'),
-(2014123222, '401', 4, '2014123222.jpg'),
-(2014222111, '302', 3, '2014222111.jpg'),
-(2016000120, '402', 4, '2016000120.jpg');
+INSERT INTO `candidato` (`id_candidato`, `numero`, `id_organo`, `foto`) VALUES(100, '100', 3, 'img9.png');
+INSERT INTO `candidato` (`id_candidato`, `numero`, `id_organo`, `foto`) VALUES(101, '101', 3, 'img9.jpg');
+INSERT INTO `candidato` (`id_candidato`, `numero`, `id_organo`, `foto`) VALUES(102, '102', 3, 'img9.jpg');
+INSERT INTO `candidato` (`id_candidato`, `numero`, `id_organo`, `foto`) VALUES(103, '103', 3, 'img9.jpg');
+INSERT INTO `candidato` (`id_candidato`, `numero`, `id_organo`, `foto`) VALUES(104, '104', 3, 'img9.jpg');
+INSERT INTO `candidato` (`id_candidato`, `numero`, `id_organo`, `foto`) VALUES(105, '105', 3, 'img9.jpg');
+INSERT INTO `candidato` (`id_candidato`, `numero`, `id_organo`, `foto`) VALUES(106, '106', 3, 'img9.jpg');
+INSERT INTO `candidato` (`id_candidato`, `numero`, `id_organo`, `foto`) VALUES(107, '107', 3, 'img9.jpg');
+INSERT INTO `candidato` (`id_candidato`, `numero`, `id_organo`, `foto`) VALUES(108, '108', 3, 'img9.jpg');
+INSERT INTO `candidato` (`id_candidato`, `numero`, `id_organo`, `foto`) VALUES(109, '109', 3, 'img9.jpg');
+INSERT INTO `candidato` (`id_candidato`, `numero`, `id_organo`, `foto`) VALUES(110, '110', 3, 'img9.jpg');
+INSERT INTO `candidato` (`id_candidato`, `numero`, `id_organo`, `foto`) VALUES(111, '111', 3, 'img9.jpg');
+INSERT INTO `candidato` (`id_candidato`, `numero`, `id_organo`, `foto`) VALUES(112, '112', 3, 'img9.jpg');
+INSERT INTO `candidato` (`id_candidato`, `numero`, `id_organo`, `foto`) VALUES(113, '113', 3, 'img9.jpg');
+INSERT INTO `candidato` (`id_candidato`, `numero`, `id_organo`, `foto`) VALUES(114, '114', 3, 'img9.jpg');
+INSERT INTO `candidato` (`id_candidato`, `numero`, `id_organo`, `foto`) VALUES(73153886, '1', 3, 'foto1.jpg');
+INSERT INTO `candidato` (`id_candidato`, `numero`, `id_organo`, `foto`) VALUES(2010020220, '2', 3, 'foto1.jpg');
+INSERT INTO `candidato` (`id_candidato`, `numero`, `id_organo`, `foto`) VALUES(2010123112, '3', 3, 'foto1.jpg');
+INSERT INTO `candidato` (`id_candidato`, `numero`, `id_organo`, `foto`) VALUES(2014222111, '4', 3, 'foto1.jpg');
 
 -- --------------------------------------------------------
 
@@ -64,11 +74,10 @@ CREATE TABLE `estado_usuario` (
 -- Volcado de datos para la tabla `estado_usuario`
 --
 
-INSERT INTO `estado_usuario` (`id_estado_usuario`, `nombre`, `descripcion`) VALUES
-(1, 'No voto', 'El usuario no ha votado'),
-(2, 'autorizado', 'autorizado por jurado'),
-(3, 'votando', 'usuario votando'),
-(4, 'voto', 'finalizo el proceso votacion');
+INSERT INTO `estado_usuario` (`id_estado_usuario`, `nombre`, `descripcion`) VALUES(1, 'No voto', 'El usuario no ha votado');
+INSERT INTO `estado_usuario` (`id_estado_usuario`, `nombre`, `descripcion`) VALUES(2, 'autorizado', 'autorizado por jurado');
+INSERT INTO `estado_usuario` (`id_estado_usuario`, `nombre`, `descripcion`) VALUES(3, 'votando', 'usuario votando');
+INSERT INTO `estado_usuario` (`id_estado_usuario`, `nombre`, `descripcion`) VALUES(4, 'voto', 'finalizo el proceso votacion');
 
 -- --------------------------------------------------------
 
@@ -85,12 +94,11 @@ CREATE TABLE `facultad` (
 -- Volcado de datos para la tabla `facultad`
 --
 
-INSERT INTO `facultad` (`id_facultad`, `nombre`) VALUES
-(1, 'Ciencias Humanas'),
-(2, 'Ciencias de la Salud'),
-(3, 'Ingenierias'),
-(4, 'Ciencias Adm & Cont'),
-(5, 'Ciencias Naturales');
+INSERT INTO `facultad` (`id_facultad`, `nombre`) VALUES(1, 'Ciencias Humanas');
+INSERT INTO `facultad` (`id_facultad`, `nombre`) VALUES(2, 'Ciencias de la Salud');
+INSERT INTO `facultad` (`id_facultad`, `nombre`) VALUES(3, 'Ingenierias');
+INSERT INTO `facultad` (`id_facultad`, `nombre`) VALUES(4, 'Ciencias Adm & Cont');
+INSERT INTO `facultad` (`id_facultad`, `nombre`) VALUES(5, 'Ciencias Naturales');
 
 -- --------------------------------------------------------
 
@@ -107,10 +115,9 @@ CREATE TABLE `lugar` (
 -- Volcado de datos para la tabla `lugar`
 --
 
-INSERT INTO `lugar` (`id_lugar`, `nombre`) VALUES
-(1, 'Plaza Colon'),
-(2, 'Santillana'),
-(3, 'Pie de la Popa');
+INSERT INTO `lugar` (`id_lugar`, `nombre`) VALUES(1, 'Plaza Colon');
+INSERT INTO `lugar` (`id_lugar`, `nombre`) VALUES(2, 'Santillana');
+INSERT INTO `lugar` (`id_lugar`, `nombre`) VALUES(3, 'Pie de la Popa');
 
 -- --------------------------------------------------------
 
@@ -128,23 +135,22 @@ CREATE TABLE `mesa` (
 -- Volcado de datos para la tabla `mesa`
 --
 
-INSERT INTO `mesa` (`id_mesa`, `nombre`, `id_lugar`) VALUES
-(1, '1', 2),
-(2, '2', 1),
-(3, '3', 3),
-(4, '4', 1),
-(5, '5', 3),
-(6, '6', 1),
-(7, '7', 2),
-(8, '8', 1),
-(9, '9', 2),
-(10, '10', 1),
-(11, '11', 1),
-(12, '12', 2),
-(13, '13', 1),
-(14, '14', 1),
-(15, '15', 2),
-(100, '100', 1);
+INSERT INTO `mesa` (`id_mesa`, `nombre`, `id_lugar`) VALUES(1, '1', 2);
+INSERT INTO `mesa` (`id_mesa`, `nombre`, `id_lugar`) VALUES(2, '2', 1);
+INSERT INTO `mesa` (`id_mesa`, `nombre`, `id_lugar`) VALUES(3, '3', 3);
+INSERT INTO `mesa` (`id_mesa`, `nombre`, `id_lugar`) VALUES(4, '4', 1);
+INSERT INTO `mesa` (`id_mesa`, `nombre`, `id_lugar`) VALUES(5, '5', 3);
+INSERT INTO `mesa` (`id_mesa`, `nombre`, `id_lugar`) VALUES(6, '6', 1);
+INSERT INTO `mesa` (`id_mesa`, `nombre`, `id_lugar`) VALUES(7, '7', 2);
+INSERT INTO `mesa` (`id_mesa`, `nombre`, `id_lugar`) VALUES(8, '8', 1);
+INSERT INTO `mesa` (`id_mesa`, `nombre`, `id_lugar`) VALUES(9, '9', 2);
+INSERT INTO `mesa` (`id_mesa`, `nombre`, `id_lugar`) VALUES(10, '10', 1);
+INSERT INTO `mesa` (`id_mesa`, `nombre`, `id_lugar`) VALUES(11, '11', 1);
+INSERT INTO `mesa` (`id_mesa`, `nombre`, `id_lugar`) VALUES(12, '12', 2);
+INSERT INTO `mesa` (`id_mesa`, `nombre`, `id_lugar`) VALUES(13, '13', 1);
+INSERT INTO `mesa` (`id_mesa`, `nombre`, `id_lugar`) VALUES(14, '14', 1);
+INSERT INTO `mesa` (`id_mesa`, `nombre`, `id_lugar`) VALUES(15, '15', 2);
+INSERT INTO `mesa` (`id_mesa`, `nombre`, `id_lugar`) VALUES(100, '100', 1);
 
 -- --------------------------------------------------------
 
@@ -162,9 +168,7 @@ CREATE TABLE `organo` (
 -- Volcado de datos para la tabla `organo`
 --
 
-INSERT INTO `organo` (`id_organo`, `nombre`, `descripcion`) VALUES
-(3, 'Consejo de Facultad', NULL);
-
+INSERT INTO `organo` (`id_organo`, `nombre`, `descripcion`) VALUES(3, 'Consejo de Facultad', NULL);
 
 -- --------------------------------------------------------
 
@@ -182,22 +186,26 @@ CREATE TABLE `programa` (
 -- Volcado de datos para la tabla `programa`
 --
 
-INSERT INTO `programa` (`id_programa`, `nombre`, `id_facultad`) VALUES
-(1, 'Ingeniería de Sistemas', 3),
-(2, 'Ingeniería Civil', 3),
-(3, 'Ingeniería Industrial', 3),
-(4, 'Ingeniería Agroindustrial', 3),
-(5, 'Medicina', 2),
-(6, 'Odontologia', 2),
-(7, 'Enfermeria', 2),
-(8, 'Optometria', 2),
-(9, 'Nutricion', 2),
-(10, 'Psicologia', 1),
-(11, 'Biologia Marina', 1),
-(12, 'Derecho', 1),
-(13, 'contaduria publica', 4),
-(14, 'EANI', 4),
-(15, 'Gastronomia', 4);
+INSERT INTO `programa` (`id_programa`, `nombre`, `id_facultad`) VALUES(1, 'Ingeniería de Sistemas', 3);
+INSERT INTO `programa` (`id_programa`, `nombre`, `id_facultad`) VALUES(2, 'Ingeniería Civil', 3);
+INSERT INTO `programa` (`id_programa`, `nombre`, `id_facultad`) VALUES(3, 'Ingeniería Industrial', 3);
+INSERT INTO `programa` (`id_programa`, `nombre`, `id_facultad`) VALUES(4, 'Ingeniería Agroindustrial', 3);
+INSERT INTO `programa` (`id_programa`, `nombre`, `id_facultad`) VALUES(5, 'Medicina', 2);
+INSERT INTO `programa` (`id_programa`, `nombre`, `id_facultad`) VALUES(6, 'Odontologia', 2);
+INSERT INTO `programa` (`id_programa`, `nombre`, `id_facultad`) VALUES(7, 'Enfermeria', 2);
+INSERT INTO `programa` (`id_programa`, `nombre`, `id_facultad`) VALUES(8, 'Optometria', 2);
+INSERT INTO `programa` (`id_programa`, `nombre`, `id_facultad`) VALUES(9, 'Nutricion', 2);
+INSERT INTO `programa` (`id_programa`, `nombre`, `id_facultad`) VALUES(10, 'Psicologia', 1);
+INSERT INTO `programa` (`id_programa`, `nombre`, `id_facultad`) VALUES(11, 'Biologia Marina', 1);
+INSERT INTO `programa` (`id_programa`, `nombre`, `id_facultad`) VALUES(12, 'Derecho', 1);
+INSERT INTO `programa` (`id_programa`, `nombre`, `id_facultad`) VALUES(13, 'contaduria publica', 4);
+INSERT INTO `programa` (`id_programa`, `nombre`, `id_facultad`) VALUES(14, 'EANI', 4);
+INSERT INTO `programa` (`id_programa`, `nombre`, `id_facultad`) VALUES(15, 'Gastronomia', 4);
+INSERT INTO `programa` (`id_programa`, `nombre`, `id_facultad`) VALUES(100, '', 3);
+INSERT INTO `programa` (`id_programa`, `nombre`, `id_facultad`) VALUES(101, '', 1);
+INSERT INTO `programa` (`id_programa`, `nombre`, `id_facultad`) VALUES(102, '', 4);
+INSERT INTO `programa` (`id_programa`, `nombre`, `id_facultad`) VALUES(103, '', 5);
+INSERT INTO `programa` (`id_programa`, `nombre`, `id_facultad`) VALUES(104, '', 2);
 
 -- --------------------------------------------------------
 
@@ -215,11 +223,10 @@ CREATE TABLE `rol` (
 -- Volcado de datos para la tabla `rol`
 --
 
-INSERT INTO `rol` (`id_rol`, `nombre`, `descripcion`) VALUES
-('A', 'ADMINISTRADOR', 'Es el super usuario....'),
-('D', 'DELEGADO', NULL),
-('J', 'JURADO', 'Es el JURADO de votacion'),
-('V', 'VOTANTE', NULL);
+INSERT INTO `rol` (`id_rol`, `nombre`, `descripcion`) VALUES('A', 'ADMINISTRADOR', 'Es el super usuario....');
+INSERT INTO `rol` (`id_rol`, `nombre`, `descripcion`) VALUES('D', 'DELEGADO', NULL);
+INSERT INTO `rol` (`id_rol`, `nombre`, `descripcion`) VALUES('J', 'JURADO', 'Es el JURADO de votacion');
+INSERT INTO `rol` (`id_rol`, `nombre`, `descripcion`) VALUES('V', 'VOTANTE', NULL);
 
 -- --------------------------------------------------------
 
@@ -237,10 +244,9 @@ CREATE TABLE `tipo_usuario` (
 -- Volcado de datos para la tabla `tipo_usuario`
 --
 
-INSERT INTO `tipo_usuario` (`id_tipo_usuario`, `nombre`, `descripcion`) VALUES
-('DOC', 'DOCENTE', NULL),
-('EGR', 'EGRESADO', NULL),
-('EST', 'ESTUDIANTE', NULL);
+INSERT INTO `tipo_usuario` (`id_tipo_usuario`, `nombre`, `descripcion`) VALUES('DOC', 'DOCENTE', NULL);
+INSERT INTO `tipo_usuario` (`id_tipo_usuario`, `nombre`, `descripcion`) VALUES('EGR', 'EGRESADO', NULL);
+INSERT INTO `tipo_usuario` (`id_tipo_usuario`, `nombre`, `descripcion`) VALUES('EST', 'ESTUDIANTE', NULL);
 
 -- --------------------------------------------------------
 
@@ -266,18 +272,32 @@ CREATE TABLE `usuario` (
 -- Volcado de datos para la tabla `usuario`
 --
 
-INSERT INTO `usuario` (`codigo`, `nombre1`, `nombre2`, `apellido1`, `apellido2`, `password`, `id_tipo_usuario`, `id_rol`, `id_programa`, `id_mesa`, `id_estado_usuario`) VALUES
-(73153886, 'Dany', 'Jose', 'Romero', 'Cortez', '73153886', 'EGR', 'V', 15, 11, 3),
-(1143263398, 'Andres', 'Felipe', 'Leones', 'Palacio', '1143263398', 'EST', 'A', 14, 9, 1),
-(2010020220, 'Federico', 'Fernando', 'Jurado', 'Preciado', 'federico', 'EST', 'V', 14, 10, 4),
-(2010123112, 'Gabriel', 'Jesús', 'Quintero', 'Fula', 'gabriel', 'DOC', 'V', 14, 8, 2),
-(2010123123, 'Hillary', 'Sofia', 'Barreto', 'Castaneda', 'hillary', 'EST', 'A', 14, 7, 1),
-(2012111229, 'Carlos', 'Enrique', 'Castro', 'Fula', 'carlos', 'EST', 'J', 14, 6, 1),
-(2012898782, 'Gustavo', 'Adolfo', 'Hernandez', 'Mendoza', 'gustavo', 'DOC', 'A', 14, 5, 1),
-(2012999123, 'Kelvin', 'Jose', 'Ramos', 'Ballestas', 'kelvin', 'EGR', 'A', 15, 4, 1),
-(2014123222, 'Hernan', 'Javier', 'Castillo', 'Pineda', 'hernan', 'EGR', 'A', 15, 3, 1),
-(2014222111, 'Ellery', 'Jose', 'Chacuto', 'Florez', 'ellery', 'EST', 'V', 15, 2, 4),
-(2016000120, 'Sandra', 'Mirleidis', 'Calvo', 'Calvo', 'sandra', 'EGR', 'J', 14, 1, 1);
+INSERT INTO `usuario` (`identificacion`, `codigo`, `nombre1`, `nombre2`, `apellido1`, `apellido2`, `password`, `id_tipo_usuario`, `id_rol`, `id_programa`, `id_mesa`, `id_estado_usuario`) VALUES(100, 080000, 'voto en Blanco', '', '', '', '', 'EST', 'V', 100, NULL, 2);
+INSERT INTO `usuario` (`identificacion`, `codigo`, `nombre1`, `nombre2`, `apellido1`, `apellido2`, `password`, `id_tipo_usuario`, `id_rol`, `id_programa`, `id_mesa`, `id_estado_usuario`) VALUES(101, 080001, 'voto en Blanco', '', '', '', '', 'EST', 'V', 101, NULL, 1);
+INSERT INTO `usuario` (`identificacion`, `codigo`, `nombre1`, `nombre2`, `apellido1`, `apellido2`, `password`, `id_tipo_usuario`, `id_rol`, `id_programa`, `id_mesa`, `id_estado_usuario`) VALUES(102, 080002, 'voto en Blanco', '', '', '', '', 'EST', 'V', 102, NULL, 1);
+INSERT INTO `usuario` (`identificacion`, `codigo`, `nombre1`, `nombre2`, `apellido1`, `apellido2`, `password`, `id_tipo_usuario`, `id_rol`, `id_programa`, `id_mesa`, `id_estado_usuario`) VALUES(103, 080003, 'voto en Blanco', '', '', '', '', 'EST', 'V', 103, NULL, 1);
+INSERT INTO `usuario` (`identificacion`, `codigo`, `nombre1`, `nombre2`, `apellido1`, `apellido2`, `password`, `id_tipo_usuario`, `id_rol`, `id_programa`, `id_mesa`, `id_estado_usuario`) VALUES(104, 080004, 'voto en Blanco', '', '', '', '', 'EST', 'V', 104, NULL, 1);
+INSERT INTO `usuario` (`identificacion`, `codigo`, `nombre1`, `nombre2`, `apellido1`, `apellido2`, `password`, `id_tipo_usuario`, `id_rol`, `id_programa`, `id_mesa`, `id_estado_usuario`) VALUES(105, 080005, 'voto en Blanco', '', '', '', '', 'DOC', 'V', 100, NULL, 1);
+INSERT INTO `usuario` (`identificacion`, `codigo`, `nombre1`, `nombre2`, `apellido1`, `apellido2`, `password`, `id_tipo_usuario`, `id_rol`, `id_programa`, `id_mesa`, `id_estado_usuario`) VALUES(106, 080006, 'voto en Blanco', '', '', '', '', 'DOC', 'V', 101, NULL, 1);
+INSERT INTO `usuario` (`identificacion`, `codigo`, `nombre1`, `nombre2`, `apellido1`, `apellido2`, `password`, `id_tipo_usuario`, `id_rol`, `id_programa`, `id_mesa`, `id_estado_usuario`) VALUES(107, 080007, 'voto en Blanco', '', '', '', '', 'DOC', 'V', 102, NULL, 1);
+INSERT INTO `usuario` (`identificacion`, `codigo`, `nombre1`, `nombre2`, `apellido1`, `apellido2`, `password`, `id_tipo_usuario`, `id_rol`, `id_programa`, `id_mesa`, `id_estado_usuario`) VALUES(108, 080008, 'voto en Blanco', '', '', '', '', 'DOC', 'V', 103, NULL, 1);
+INSERT INTO `usuario` (`identificacion`, `codigo`, `nombre1`, `nombre2`, `apellido1`, `apellido2`, `password`, `id_tipo_usuario`, `id_rol`, `id_programa`, `id_mesa`, `id_estado_usuario`) VALUES(109, 080009, 'voto en Blanco', '', '', '', '', 'DOC', 'V', 104, NULL, 1);
+INSERT INTO `usuario` (`identificacion`, `codigo`, `nombre1`, `nombre2`, `apellido1`, `apellido2`, `password`, `id_tipo_usuario`, `id_rol`, `id_programa`, `id_mesa`, `id_estado_usuario`) VALUES(110, 080010, 'voto en Blanco', '', '', '', '', 'EGR', 'V', 100, NULL, 1);
+INSERT INTO `usuario` (`identificacion`, `codigo`, `nombre1`, `nombre2`, `apellido1`, `apellido2`, `password`, `id_tipo_usuario`, `id_rol`, `id_programa`, `id_mesa`, `id_estado_usuario`) VALUES(111, 080011, 'voto en Blanco', '', '', '', '', 'EGR', 'V', 101, NULL, 1);
+INSERT INTO `usuario` (`identificacion`, `codigo`, `nombre1`, `nombre2`, `apellido1`, `apellido2`, `password`, `id_tipo_usuario`, `id_rol`, `id_programa`, `id_mesa`, `id_estado_usuario`) VALUES(112, 080012, 'voto en Blanco', '', '', '', '', 'EGR', 'V', 102, NULL, 1);
+INSERT INTO `usuario` (`identificacion`, `codigo`, `nombre1`, `nombre2`, `apellido1`, `apellido2`, `password`, `id_tipo_usuario`, `id_rol`, `id_programa`, `id_mesa`, `id_estado_usuario`) VALUES(113, 080013, 'voto en Blanco', '', '', '', '', 'EGR', 'V', 103, NULL, 1);
+INSERT INTO `usuario` (`identificacion`, `codigo`, `nombre1`, `nombre2`, `apellido1`, `apellido2`, `password`, `id_tipo_usuario`, `id_rol`, `id_programa`, `id_mesa`, `id_estado_usuario`) VALUES(114, 080014, 'voto en Blanco', '', '', '', '', 'EGR', 'V', 104, NULL, 1);
+INSERT INTO `usuario` (`identificacion`, `codigo`, `nombre1`, `nombre2`, `apellido1`, `apellido2`, `password`, `id_tipo_usuario`, `id_rol`, `id_programa`, `id_mesa`, `id_estado_usuario`) VALUES(73153886, 73153886, 'Dany', 'Jose', 'Romero', 'Cortez', '73153886', 'EGR', 'A', 5, NULL, 4);
+INSERT INTO `usuario` (`identificacion`, `codigo`, `nombre1`, `nombre2`, `apellido1`, `apellido2`, `password`, `id_tipo_usuario`, `id_rol`, `id_programa`, `id_mesa`, `id_estado_usuario`) VALUES(1143263398, 1143263398, 'Andres', 'Felipe', 'Leones', 'Palacio', '1143263398', 'EST', 'J', 14, NULL, 2);
+INSERT INTO `usuario` (`identificacion`, `codigo`, `nombre1`, `nombre2`, `apellido1`, `apellido2`, `password`, `id_tipo_usuario`, `id_rol`, `id_programa`, `id_mesa`, `id_estado_usuario`) VALUES(2010020220, 2010020220, 'Federico', 'Fernando', 'Jurado', 'Preciado', 'federico', 'EST', 'V', 14, NULL, 4);
+INSERT INTO `usuario` (`identificacion`, `codigo`, `nombre1`, `nombre2`, `apellido1`, `apellido2`, `password`, `id_tipo_usuario`, `id_rol`, `id_programa`, `id_mesa`, `id_estado_usuario`) VALUES(2010123112, 2010123112, 'Gabriel', 'Jesús', 'Quintero', 'Fula', 'gabriel', 'DOC', 'V', 14, NULL, 4);
+INSERT INTO `usuario` (`identificacion`, `codigo`, `nombre1`, `nombre2`, `apellido1`, `apellido2`, `password`, `id_tipo_usuario`, `id_rol`, `id_programa`, `id_mesa`, `id_estado_usuario`) VALUES(2010123123, 2010123123, 'Hillary', 'Sofia', 'Barreto', 'Castaneda', 'hillary', 'EST', 'A', 14, NULL, 1);
+INSERT INTO `usuario` (`identificacion`, `codigo`, `nombre1`, `nombre2`, `apellido1`, `apellido2`, `password`, `id_tipo_usuario`, `id_rol`, `id_programa`, `id_mesa`, `id_estado_usuario`) VALUES(2012111229, 2012111229, 'Carlos', 'Enrique', 'Castro', 'Fula', 'carlos', 'EST', 'J', 14, NULL, 1);
+INSERT INTO `usuario` (`identificacion`, `codigo`, `nombre1`, `nombre2`, `apellido1`, `apellido2`, `password`, `id_tipo_usuario`, `id_rol`, `id_programa`, `id_mesa`, `id_estado_usuario`) VALUES(2012898782, 2012898782, 'Gustavo', 'Adolfo', 'Hernandez', 'Mendoza', 'gustavo', 'DOC', 'A', 14, NULL, 1);
+INSERT INTO `usuario` (`identificacion`, `codigo`, `nombre1`, `nombre2`, `apellido1`, `apellido2`, `password`, `id_tipo_usuario`, `id_rol`, `id_programa`, `id_mesa`, `id_estado_usuario`) VALUES(2012999123, 2012999123, 'Kelvin', 'Jose', 'Ramos', 'Ballestas', 'kelvin', 'EGR', 'A', 15, NULL, 1);
+INSERT INTO `usuario` (`identificacion`, `codigo`, `nombre1`, `nombre2`, `apellido1`, `apellido2`, `password`, `id_tipo_usuario`, `id_rol`, `id_programa`, `id_mesa`, `id_estado_usuario`) VALUES(2014123222, 2014123222, 'Hernan', 'Javier', 'Castillo', 'Pineda', 'hernan', 'EGR', 'A', 15, NULL, 1);
+INSERT INTO `usuario` (`identificacion`, `codigo`, `nombre1`, `nombre2`, `apellido1`, `apellido2`, `password`, `id_tipo_usuario`, `id_rol`, `id_programa`, `id_mesa`, `id_estado_usuario`) VALUES(2014222111, 2014222111, 'Ellery', 'Jose', 'Chacuto', 'Florez', 'ellery', 'EST', 'V', 15, NULL, 4);
+INSERT INTO `usuario` (`identificacion`, `codigo`, `nombre1`, `nombre2`, `apellido1`, `apellido2`, `password`, `id_tipo_usuario`, `id_rol`, `id_programa`, `id_mesa`, `id_estado_usuario`) VALUES(2016000120, 2016000120, 'Sandra', 'Mirleidis', 'Calvo', 'Calvo', 'sandra', 'EGR', 'J', 14, NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -287,22 +307,19 @@ INSERT INTO `usuario` (`codigo`, `nombre1`, `nombre2`, `apellido1`, `apellido2`,
 
 CREATE TABLE `voto` (
   `id_mesa` int(2) NOT NULL,
-  `id_candidato` int(12) NOT NULL
+  `id_candidato` int(12) NOT NULL,
+  `Fecha_hora` int(11) NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `voto`
 --
 
-INSERT INTO `voto` (`id_mesa`, `id_candidato`) VALUES
-(11, 73153886),
-(11, 1143263398),
-(11, 2014222111),
-(11, 2014123222),
-(11, 73153886),
-(11, 1143263398),
-(11, 2014222111),
-(11, 2014123222);
+INSERT INTO `voto` (`id_mesa`, `id_candidato`, `Fecha_hora`) VALUES(11, 73153886, 2147483647);
+INSERT INTO `voto` (`id_mesa`, `id_candidato`, `Fecha_hora`) VALUES(2, 102, 2147483647);
+INSERT INTO `voto` (`id_mesa`, `id_candidato`, `Fecha_hora`) VALUES(8, 2010123112, 2147483647);
+INSERT INTO `voto` (`id_mesa`, `id_candidato`, `Fecha_hora`) VALUES(8, 107, 2147483647);
+INSERT INTO `voto` (`id_mesa`, `id_candidato`, `Fecha_hora`) VALUES(11, 114, 2147483647);
 
 --
 -- Índices para tablas volcadas
@@ -414,14 +431,20 @@ ALTER TABLE `mesa`
 -- Filtros para la tabla `candidato`
 --
 ALTER TABLE `candidato`
-  ADD CONSTRAINT `candidato_ibfk_1` FOREIGN KEY (`id_organo`) REFERENCES `organo` (`id_organo`),
-  ADD CONSTRAINT `candidato_ibfk_2` FOREIGN KEY (`id_candidato`) REFERENCES `usuario` (`codigo`);
+  ADD CONSTRAINT `candidato_ibfk_1` FOREIGN KEY (`id_candidato`) REFERENCES `usuario` (`codigo`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `candidato_ibfk_2` FOREIGN KEY (`id_organo`) REFERENCES `organo` (`id_organo`) ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `mesa`
 --
 ALTER TABLE `mesa`
   ADD CONSTRAINT `mesa_ibfk_1` FOREIGN KEY (`id_lugar`) REFERENCES `lugar` (`id_lugar`);
+
+--
+-- Filtros para la tabla `programa`
+--
+ALTER TABLE `programa`
+  ADD CONSTRAINT `programa_ibfk_1` FOREIGN KEY (`id_facultad`) REFERENCES `facultad` (`id_facultad`) ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `usuario`

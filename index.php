@@ -29,10 +29,9 @@
 
     <title>Elecciones</title>
   </head>
-  <body class="" style="background-image: url('assets/img/santillana.jpg');">
+  <body style="background-image: url('assets/img/unisinu.png');">
 	<div class="container contenido">
     <div class="col-md-12" style="float: left;background-image: url('assets/img/.png');height: 730px;">
-      <br><br>
     <section id="login">
     <div class="container text-center">
       <div class="row" style="width:auto;">
@@ -41,7 +40,7 @@
         </div>
         <div class="col-md-4 modal-content animate" style="width: auto;margin-left:33px; border-color: red;">
           <div class="login" style="width: auto;height:auto;">
-            <br><br>
+            <br>
             <img class="img_login" src="assets/img/section_login.png" style="height: 200px;width: 200px;" alt="">
               <!-- formulario -->
               <form class="form-group" role="form" action="model/acceder.php" method="post" >
@@ -77,13 +76,6 @@
   </section>
   </div>
   </div> <!-- /.container -->
-
-  <div class="row">
-    <div class="col-xs-2">
-      <hr />
-      <footer class="footer-distributed"></footer>
-    </div>
-  </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/funcionlogin.js"></script>

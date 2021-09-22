@@ -1,19 +1,22 @@
 <?php
 	session_start();
+	error_reporting(0);
 	include '../model/conexion.php';
 	require_once '../model/reloj.php';
 	$mysqli = getConn();
-	$correo = $_POST["codigo"];
+	$codigo1 = $_POST["codigo"];
 	$pass = $_POST["password"];
 	$type = $_POST["id_tipo_usuario"];
 
-	$consulta = "SELECT * FROM usuario WHERE codigo = '$correo'";
+	$consulta = "SELECT * FROM usuario WHERE codigo = '$codigo1'";
 	$resultado = mysqli_query($mysqli,$consulta);
 	$filas =  mysqli_fetch_array($resultado);
 	//variables que me almacenan campos de la tabla usuario
+	$identificacion = $filas["identificacion"];
 	$password = $filas["password"];
 	$estadoActual = $filas["id_estado_usuario"];
 	$rolActual = $filas["id_rol"];
+	$code = $filas["codigo"];
 
 	$consulta2 = "SELECT id_tipo_usuario FROM tipo_usuario WHERE id_tipo_usuario = '$type'";
 	$resultado2 = mysqli_query($mysqli,$consulta2);
@@ -180,9 +183,23 @@
 		}else {
 			require_once("../view/error_sesion.php");
 			echo '<script type="text/javascript">
-			swal("El usuario o la contraseña son incorrectos!", "Vuelva a intentarlo", "error");
+			swal("El tipo de usuario seleccionado no corresponde a su usuario", "Vuelva a intentarlo", "error");
+								</script>';
+					require_once("salir.php");
+	}
+	}else {
+		require_once("../view/error_sesion.php");
+		echo '<script type="text/javascript">
+		swal("El usuario o la contraseña son incorrectos!", "Vuelva a intentarlo", "error");
+							</script>';
+				require_once("salir.php");
+			}
+
+		if ($codigo1 != $code) {
+			require_once("../view/error_sesion.php");
+			echo '<script type="text/javascript">
+			swal("Usuario no Existente", "Verifique sus credenciales", "error");
 								</script>';
 					require_once("salir.php");
 		}
-	}
 ?>

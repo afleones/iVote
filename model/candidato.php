@@ -95,7 +95,7 @@ class candidato
 		include "conexion.php";
 		$mysqli = getConn();
 
-		$consulta = "SELECT id_rol FROM usuario WHERE codigo = '$data->id_candidato'";
+		$consulta = "SELECT id_rol FROM usuario WHERE identificacion = '$data->id_candidato'";
 		$resultado = mysqli_query($mysqli,$consulta);
 		$filas =  mysqli_fetch_array($resultado);
 		$rolA = $filas["id_rol"];
@@ -133,7 +133,7 @@ class candidato
 		{
 			$result = array();
 
-			$stm = $this->pdo->prepare("SELECT * FROM usuario WHERE id_rol != 'J' && id_rol != 'A' ");
+			$stm = $this->pdo->prepare("SELECT identificacion, nombre1, apellido1 FROM usuario WHERE id_rol != 'J' && id_rol != 'A' GROUP BY 1,2,3 ");
 			$stm->execute();
 
 			return $stm->fetchAll(PDO::FETCH_OBJ);

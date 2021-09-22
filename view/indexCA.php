@@ -4,7 +4,7 @@
   require_once '../model/database.php';
   session_start();
   if( $_SESSION["idrol"] == 'V' ){
-    require_once '../view/error_usuarioCA.php';// este se muestra cuando quieren acceder a la vista 
+    require_once '../view/error_usuarioCA.php';// este se muestra cuando quieren acceder a la vista
   }else{
   //Para registrar productos es necesario iniciar los usuarios
   //de los mismos, por ello la variable controller para este

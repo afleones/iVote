@@ -26,7 +26,7 @@
   </style>
   <title>Elecciones</title>
 </head>
-<body class="" style="background-image: url('../assets/img/santillana.jpg');">
+<body class="" style="background-image: url('../assets/img/unisinu.png');">
 <div class="container contenido">
   <div class="col-md-12" style="float: left;background-image: url('../assets/img/.png');height: 730px;">
     <br><br>
@@ -73,30 +73,7 @@
     </div> <!-- /.container -->
   </section>
   </div>
-
-  <div class="row">
-    <div class="col-xs-12">
-      <hr />
-      <footer class="footer-distributed">
-        <div class="footer-left">
-          <p class="footer-links">
-          <a href="index.php">Inicio</a>
-          </p>
-          <p>Elecciones UniSinu 2021</p>
-        </div>
-      </footer>
-    </div>
-  </div>
-
   </div> <!-- /.container -->
-
-  <div class="row">
-    <div class="col-xs-2">
-      <hr />
-      <footer class="footer-distributed"></footer>
-    </div>
-  </div>
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="../assets/js/bootstrap.min.js"></script>
   <script src="../assets/js/funcionlogin.js"></script>
