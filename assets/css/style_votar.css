@@ -15,7 +15,6 @@
   border-radius: 40px;
 }
 
-
   ul {
       list-style-type: none;
   }
@@ -103,3 +102,5 @@
         width: 40px;
         transition-duration: 0.2s;
         transform-origin: 50% 50%;
+      }
+    }

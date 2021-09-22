@@ -1,0 +1,28 @@
+.login {
+  min-height: 100vh;
+}
+
+.bg-image {
+  background-image: url('../img/e-voto.jpeg');
+  background-size: cover;
+  background-position: center;
+}
+
+.login-heading {
+  font-weight: 300;
+}
+
+
+button{
+  background-color: red;
+  padding: 8px;
+  border-radius: 5px;
+  color: white;
+  border: 0;
+  font-family: sans-serif;
+}
+
+.logo-unisinu{
+  display: block;
+  margin: auto;
+}

@@ -1,4 +1,4 @@
-function verpassword(){
+function verPassword(){
     var tipo = document.getElementById("password");
     if(tipo.type == "password")
 	 {
