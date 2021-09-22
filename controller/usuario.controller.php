@@ -101,5 +101,5 @@ class UsuarioController{
         header('Location: ../view/indexUS.php');
     }
 }
-}//fin del ese
+}//fin del else
 ?>

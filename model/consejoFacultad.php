@@ -1,6 +1,6 @@
 <?php
 // Desactivar toda las notificaciónes del PHP
-//error_reporting(0);
+	error_reporting(0);
 ?>
 <?php
 	session_start();
@@ -39,7 +39,7 @@
 												programa.nombre AS prog,
 												facultad.nombre FROM usuario
 												INNER JOIN tipo_usuario ON usuario.id_tipo_usuario = tipo_usuario.id_tipo_usuario
-												INNER JOIN candidato ON candidato.id_candidato = usuario.codigo
+												INNER JOIN candidato ON candidato.id_candidato = usuario.identificacion
 												INNER JOIN programa ON programa.id_programa = usuario.id_programa
 												INNER JOIN facultad ON facultad.id_facultad = programa.id_facultad
 												WHERE usuario.id_tipo_usuario = '".$_SESSION["tipouser"]."' AND facultad.id_facultad = ".$_SESSION["fac"]." ";

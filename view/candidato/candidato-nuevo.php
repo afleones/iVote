@@ -13,10 +13,10 @@
       <label>ID Candidato</label>
 	  <select class="form-control form-control-sm" name="id_candidato" value="" data-validacion-tipo="requerido|min:1">
 		  	<?php foreach($this->model->ListarID() as $s): ?>
-  				<option value="<?php echo $s->codigo; ?>"><?php echo $s->codigo; ?> - <?php echo $s->nombre1; ?> <?php echo $s->apellido1; ?></option>
+  				<option value="<?php echo $s->identificacion; ?>"><?php echo $s->identificacion; ?> - <?php echo $s->nombre1; ?> <?php echo $s->apellido1; ?></option>
 		  	<?php endforeach; ?>
 	  </select>
-    
+
 		<!---CODIGO EN ESPER
       <input type="text" name="id_candidato" value="echo $prod->id_candidato; " class="form-control" placeholder="Ingrese ID candidato" data-validacion-tipo="requerido|min:20" />-->
     </div>
@@ -25,7 +25,7 @@
         <label>Número</label>
         <input type="number" name="numero" value="<?php echo $prod->numero; ?>" class="form-control" placeholder="Ingrese numero" data-validacion-tipo="requerido|min:1" min="1" max="999"/>
     </div>
-	
+
 	<div class="form-group">
         <label>Órgano</label><br>
 		<select class="form-control form-control-sm" name="id_organo" value="<?php echo $prod->id_organo; ?>" data-validacion-tipo="requerido|min:1">
