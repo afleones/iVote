@@ -1,0 +1,22 @@
+id_programa;nombre;id_facultad
+1;Ingenieria de Sistemas;3
+2;Ingenieria Civil;3
+3;Ingenieria Industrial;3
+4;Ingenieria Agroindustrial;3
+5;Medicina;2
+6;Odontologia;2
+7;Enfermeria;2
+8;Optometria;2
+9;Nutricion;2
+10;Psicologia;1
+11;Biologia Marina;1
+12;Derecho;1
+13;contaduria publica;4
+14;Administracion de Negocios Internacionales;4
+15;Gastronomia;4
+16;Especializacion en Pediatria;2
+100;Voto en blanco Ingenierias;3
+101;Voto en blanco Ciencias Sociales y Humanas;1
+102;Voto en Blanco Ciencias Administrativas, Economica y Contables;4
+103;Voto en Blanco Ciencias Naturales;5
+104;Voto en Blanco Ciencias de la Salud;2
