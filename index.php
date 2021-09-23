@@ -19,7 +19,6 @@
     <link rel="stylesheet" href="assets/css/style.css">
   	<link rel="icon" type="image/png" href="assets/img/favicon.ico"/>
   	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"> <!--en css font-family: 'Ubuntu', sans-serif;-->
-
     <title>Elecciones</title>
   </head>
   <body>
@@ -27,30 +26,57 @@
           <div class="row g-0">
             <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image"></div>
             <div class="col-md-8 col-lg-6">
-              <div class="login d-flex align-items-center py-5">
+              <div class="login d-flex align-items-center">
                 <div class="container">
                   <div class="row">
                     <div class="col-md-9 col-lg-8 mx-auto">
                       <img class="logo-unisinu" src="assets/img/logo_izquierda.png" alt="logo Unisinu">
                       <!-- Sign In Form -->
                       <form role="form" action="model/acceder.php" method="post" id="form-login">
-                        <div class="form-floating mb-3">
+                        <div class="form-floating mb-1">
                           <input type="codigo" name="codigo" class="form-control" id="floatingInput" placeholder="Codigo Estudiantil">
                           <label for="floatingInput">Usuario</label>
                         </div>
-                        <div class="form-floating mb-3">
+                        <div class="form-floating mb-1">
                           <input type="password" name ="password" class="form-control" id="password" placeholder="Contraseña">
                           <label for="password">Contraseña</label>
                           <input type="checkbox" id="password" onclick="verPassword()">Mostrar Contraseña
                         </div>
-                        <div class="form-floating mb-3">
+                        <div class="form-floating mb-1">
                           <select class="form-select" aria-label="Default select example" name="id_tipo_usuario" id="id_tipo_usuario">
                               <option value="" style="display:none;">Estudiante, Docente o Egresado</option>
-                              <option value="EST" >Estudiante</option>
-                              <option value="DOC">Docente</option>
-                              <option value="EGR">Egresado</option>
+                              <?php
+                              $consultatipousuario = "SELECT * FROM tipo_usuario";
+                              $resultadotipousuario = mysqli_query($mysqli,$consultatipousuario);
+                              while($mostrar=mysqli_fetch_object($resultadotipousuario)){
+                                $id = $mostrar->id_tipo_usuario;
+                          			$nombretipousuario = $mostrar->nombre;
+                                if (empty($nombretipousuario)) {
+                                }else {
+                                  echo "<option value='$id'>$nombretipousuario</option>";
+                                }
+                          		}
+                               ?>
                           </select>
                           <label for="floatingInput">Tipo de Usuario</label>
+                        </div>
+                        <div class="form-floating mb-1">
+                          <select class="form-select" aria-label="Default select example" name="id_prog" id="id_programa">
+                              <option value="" style="display:none;">Seleccione Programa</option>
+                              <?php
+                              $consultaprog = "SELECT * FROM programa";
+                              $resultadoprog = mysqli_query($mysqli,$consultaprog);
+                              while($mostrar=mysqli_fetch_object($resultadoprog)){
+                                $id = $mostrar->id_programa;
+                          			$nombreprograma = $mostrar->nombre;
+                                if (empty($nombreprograma)) {
+                                }else {
+                                  echo "<option value='$id'>$nombreprograma</option>";
+                                }
+                          		}
+                               ?>
+                          </select>
+                          <label for="floatingInput">Programa</label>
                         </div>
                         <div class="d-grid">
                           <button type="submit">Iniciar Sesion</button>
@@ -63,7 +89,7 @@
                     <!-- Copyright -->
                     <div class="text-center p-4">
                       © 2021 Desarrollado por:
-                      <a class="text-reset fw-bold" href="https://www.unisinucartagena.edu.co/">  Direccion Académica</a>
+                      <a class="text-reset fw-bold" href="https://www.unisinucartagena.edu.co/">  Dirección Académica</a>
                     </div>
                     <!-- Copyright -->
                   </footer>

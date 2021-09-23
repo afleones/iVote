@@ -56,22 +56,22 @@
           }
           */
 
-          if(sw == 1){
-            //alert("CORRECTO");
-            
-            $('#mensaje_confirm').html("Confirmación de selección.<br/>Usted seleccionó el candidato: " + partido_politico + '.<br/><br/> ¿Es correcto la elección?');
-            $('#confirmarvoto').modal('show'); // abrir
-          }else{
-            $('#voto_error').modal('show'); // abrir
-          }
-            //si acepta la seleccion que hizo del candidato
-          $("#btn_aceptar_voto").click(function(){
-            $('#confirmarvoto').modal('hide'); // abrir
-            $('#voto_realizado').modal('show'); // abrir
-          });
+          // if(sw == 1){
+          //   //alert("CORRECTO");
+          //
+          //   $('#mensaje_confirm').html("Confirmación de selección.<br/>Usted seleccionó el candidato: " + partido_politico + '.<br/><br/> ¿Es correcto la elección?');
+          //    $('#confirmarvoto').modal('show'); // abrir
+          // }else{
+          //   $('#voto_error').modal('show'); // abrir
+          // }
+          //   //si acepta la seleccion que hizo del candidato
+          // $("#btn_aceptar_voto").click(function(){
+          //   $('#confirmarvoto').modal('hide'); // abrir
+          //   $('#voto_realizado').modal('show'); // abrir
+          // });
 
-          
-          
+
+
           /*
           $("#btn_imprimir_certificado").click(function(){
             location.href ="../index.php";
@@ -79,12 +79,12 @@
           */
 
         });
-    
+
     });
 
      function registraVO(id){
           //console.log("La variable mesa ha llegado con el valor: " + id);
-            //alert("La variable mesa es: " + mesa);
+          //alert("La variable mesa es: " + mesa);
 
             var partido_politico = "";
         //var partido_politico_tarjeton = -1;
@@ -111,5 +111,5 @@
                 console.log("Error: " + data)
               }
             });
-     
+
     }

@@ -1,14 +1,18 @@
 <?php
 	session_start();
-	error_reporting(0);
+  error_reporting(0);
 	include '../model/conexion.php';
 	require_once '../model/reloj.php';
 	$mysqli = getConn();
 	$codigo1 = $_POST["codigo"];
 	$pass = $_POST["password"];
 	$type = $_POST["id_tipo_usuario"];
+	//variable traida a travez de $_POST desde el form-login (Select-> Programa)
+	// $id_prog = Nombre del Select
+	// $programa_id = Variable a la que se le asigna el Valor POST
+	$programa_id = $_POST["id_prog"];
 
-	$consulta = "SELECT * FROM usuario WHERE codigo = '$codigo1'";
+	$consulta = "SELECT * FROM usuario WHERE codigo = '$codigo1' AND id_programa = $programa_id";
 	$resultado = mysqli_query($mysqli,$consulta);
 	$filas =  mysqli_fetch_array($resultado);
 	//variables que me almacenan campos de la tabla usuario
@@ -17,6 +21,7 @@
 	$estadoActual = $filas["id_estado_usuario"];
 	$rolActual = $filas["id_rol"];
 	$code = $filas["codigo"];
+	$id_p = $filas["id_programa"];
 
 	$consulta2 = "SELECT id_tipo_usuario FROM tipo_usuario WHERE id_tipo_usuario = '$type'";
 	$resultado2 = mysqli_query($mysqli,$consulta2);
@@ -25,6 +30,7 @@
 
 	if($password == $pass && $rolActual === 'J' && $estadoActual != '2') {
 		if ($id_tipo_usuario == $type) {
+			$_SESSION["id_usu"] = $filas["identificacion"];
 			$_SESSION["name"] = $filas["nombre1"];
 			$_SESSION["name2"] = $filas["nombre2"];
 			$_SESSION["ape1"] = $filas["apellido1"];
@@ -59,6 +65,7 @@
 	if($password == $pass && $rolActual === 'J' && $estadoActual === '2'){
 			if ($id_tipo_usuario == $type) {
 				session_start();
+				$_SESSION["id_usu"] = $filas["identificacion"];
 				$_SESSION["name"] = $filas["nombre1"];
 				$_SESSION["name2"] = $filas["nombre2"];
 				$_SESSION["ape1"] = $filas["apellido1"];
@@ -86,6 +93,7 @@
 	if($password == $pass && $rolActual === 'A') {
 		if ($id_tipo_usuario == $type) {
 			session_start();
+			$_SESSION["id_usu"] = $filas["identificacion"];
 			$_SESSION["name"] = $filas["nombre1"];
 			$_SESSION["name2"] = $filas["nombre2"];
 			$_SESSION["ape1"] = $filas["apellido1"];
@@ -112,6 +120,7 @@
 	if($password == $pass && $rolActual === 'V' && $estadoActual === '2') {
 			if ($id_tipo_usuario == $type){
 				session_start();
+				$_SESSION["id_usu"] = $filas["identificacion"];
 				$_SESSION["name"] = $filas["nombre1"];
 				$_SESSION["name2"] = $filas["nombre2"];
 				$_SESSION["ape1"] = $filas["apellido1"];
@@ -199,6 +208,14 @@
 			require_once("../view/error_sesion.php");
 			echo '<script type="text/javascript">
 			swal("Usuario no Existente", "Verifique sus credenciales", "error");
+								</script>';
+					require_once("salir.php");
+		}
+
+		if($programa_id != $id_p) {
+			require_once("../view/error_sesion.php");
+			echo '<script type="text/javascript">
+			swal("Usuario no está Asociado a este Programa", "Verifique su Programa", "error");
 								</script>';
 					require_once("salir.php");
 		}
