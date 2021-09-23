@@ -1,5 +1,5 @@
 <p align="center">
-    ![alt text](https://raw.githubusercontent.com/username/afleones/main/path/to/e-voto.jpeg)
+    <img src="https://i.imgur.com/5cp3bB2.jpg" title="source: imgur.com" alt="" width=50% height=50% />
 
   <h3 align="center">Sistema Electoral E-VOTE UNISINU CARTAGENA</h3>
 
