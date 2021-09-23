@@ -11,7 +11,8 @@
     <nav class="navbar navbar-default">
         <div class="container-fluid">
           <div class="navbar-header">
-              <a style="font-size: 20px;" class="navbar-brand" href="">  <?php
+              <a style="font-size: 20px;" class="navbar-brand" href="">
+                <?php
                   echo $_SESSION["name"] . "  " . $_SESSION["name2"] . "  " . $_SESSION["ape1"] . "  " . $_SESSION["ape2"] . " - " . $_SESSION["id_usuario"];
                 ?></a>
                 <a style="font-size: 20px;" class="navbar-brand" href="#"><button onclick="cerrarSUS();" style="margin-top: -7px;" class="btn btn-danger" id="cerrar">
@@ -89,12 +90,11 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" onclick="window.location.reload()"> NO </button>
-          <button type="button" class="btn btn-primary" id="btn_aceptar_voto" onclick="registraVO(<?php echo $_SESSION['mesa']; ?>)"> SI </button>
+          <button type="button" class="btn btn-primary" id="btn_aceptar_voto" onclick="registraVO(<?php echo $_SESSION['mesa'];?>)"> SI </button>
         </div>
       </div>
     </div>
   </div>
-
   <!-- Modal -->
   <div class="modal fade" id="voto_realizado" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
