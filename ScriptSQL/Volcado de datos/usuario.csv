@@ -1,0 +1,16 @@
+identificacion;codigo;nombre1;nombre2;apellido1;apellido2;password;id_tipo_usuario;id_rol;id_programa;id_mesa;id_estado_usuario
+100;80000;VB Ing EST;;;;;EST;V;100;NULL;2
+101;80001;VB C. Humanas EST;;;;;EST;V;101;NULL;1
+102;80002;VB Adm & Cont EST;;;;;EST;V;102;NULL;1
+103;80003;VB C. Naturales EST;;;;;EST;V;103;NULL;1
+104;80004;VB C. Salud EST;;;;;EST;V;104;NULL;1
+105;80005;VB, Ing DOC;;;;;DOC;V;100;NULL;1
+106;80006;VB, C. Humanas DOC;;;;;DOC;V;101;NULL;1
+107;80007;VB, adm&cont DOC;;;;;DOC;V;102;NULL;1
+108;80008;VB C. Natural es DOC;;;;;DOC;V;103;NULL;1
+109;80009;VB, C. Salud DOC;;;;;DOC;V;104;NULL;1
+110;80010;VB Ing EGR;;;;;EGR;V;100;NULL;1
+111;80011;VB C. Humanas EGR;;;;;EGR;V;101;NULL;1
+112;80012;VB Adm&Cont EGR;;;;;EGR;V;102;NULL;1
+113;80013;VB C. naturales EGR;;;;;EGR;V;103;NULL;1
+114;80014;VB C. Salud EGR;;;;;EGR;V;104;NULL;1
