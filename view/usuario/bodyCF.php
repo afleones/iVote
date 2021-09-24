@@ -51,36 +51,25 @@
             if(empty($prog[$k])) {
               echo "<br><br><br><br>";
             }else {
-              echo  "Programa: <br>   $prog[$k]</li><br>";
+              echo  "Programa:<br>$prog[$k]</li><br>";
             };
           echo "</ul>";
         }
       ?>
-      <!-- <li class="col-md-4 list-group list-group-horizontal-xl text-center">
-        <input class="chk" id="cb102" name="chk[]" value="2013213033" type="checkbox" />
-        <label for="cb102" style="border:10px solid gray;">
-          <img style="width: auto;height: auto" src="../../assets/img/candidatos/img9.jpg"/>
-          <h6 class="text-center">Voto en blanco</h6>
-        </label>
-      </li> -->
     </ul>
   </div>
-
-
-
   </div>
   <!--Boton votar-->
   <div class="d-flex justify-content-center mt-4">
-    <center><button type="button" class="btn btn-danger" id="btn_id" style="font-size: 20px;">VOTAR</button></center><br><br><br>
+    <center><button type="button" class="btn btn-danger" id="btn_id" name="boton" style="font-size: 20px;">VOTAR</button></center><br><br><br>
   </div>
   <!-- FIN DIV container mt-4-- >
-
   <!-- Modal -->
   <div class="modal fade" id="confirmarvoto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">UNIVERSIDAD DEL SINU</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Confirmar Voto</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -89,45 +78,18 @@
           <span id="mensaje_confirm"></span>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" onclick="window.location.reload()"> NO </button>
-          <button type="button" class="btn btn-primary" id="btn_aceptar_voto" onclick="registraVO(<?php echo $_SESSION['mesa'];?>)"> SI </button>
+          <button type="button" class="btn btn-danger" onclick="window.location.reload()"> NO </button>
+          <button type="button" class="btn btn-success" id="btn_aceptar_voto" onclick="registraVO(<?php echo $_SESSION['mesa'];?>)"> SI </button>
         </div>
       </div>
     </div>
   </div>
-  <!-- Modal -->
-  <div class="modal fade" id="voto_realizado" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">UNIVERSIDAD DEL SINU</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <h2>Voto exitoso!</h2>
-          <span id="">
-            <!--
-            <img src="../../assets/img/candidatos/logo_unisinu.png" alt="">
-            Siga a la mesa para reclamar su certificado electoral.
-            -->
-            Selección correcta
-          </span>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary"  data-dismiss="modal" onclick="window.location.href='ciarp.php'"> ACEPTAR </button>
-        </div>
-      </div>
-    </div>
-  </div>
-
     <!-- Modal -->
   <div class="modal fade" id="voto_error" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">UNIVERSIDAD DEL SINU</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Error</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -139,7 +101,7 @@
           </span>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" onclick="window.location.reload()"> ACEPTAR </button>
+          <button type="button" class="btn btn-success" onclick="window.location.reload()"> ACEPTAR </button>
         </div>
       </div>
     </div>
