@@ -55,20 +55,18 @@
             }
           }
           */
-
-          // if(sw == 1){
-          //   //alert("CORRECTO");
-          //
-          //   $('#mensaje_confirm').html("Confirmación de selección.<br/>Usted seleccionó el candidato: " + partido_politico + '.<br/><br/> ¿Es correcto la elección?');
-          //    $('#confirmarvoto').modal('show'); // abrir
-          // }else{
-          //   $('#voto_error').modal('show'); // abrir
-          // }
-          //   //si acepta la seleccion que hizo del candidato
-          // $("#btn_aceptar_voto").click(function(){
-          //   $('#confirmarvoto').modal('hide'); // abrir
-          //   $('#voto_realizado').modal('show'); // abrir
-          // });
+           if(sw == 1){
+             //alert("CORRECTO");
+             $('#mensaje_confirm').html("¿Confirma el candidato por el que desea votar?");
+              $('#confirmarvoto').modal('show'); // abrir
+           }else{
+             $('#voto_error').modal('show'); // abrir
+           }
+             //si acepta la seleccion que hizo del candidato
+           $("#btn_aceptar_voto").click(function(){
+             $('#confirmarvoto').modal('hide'); // abrir
+             $('#voto_realizado').modal('show'); // abrir
+           });
 
 
 
@@ -95,6 +93,7 @@
             if(los_cboxes[i].checked == true){
               suma++;
               partido_politico = los_cboxes[i].value;
+              window.location.href='ciarp.php'
             }
           }
 
@@ -111,5 +110,4 @@
                 console.log("Error: " + data)
               }
             });
-
     }

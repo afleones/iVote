@@ -34,7 +34,7 @@
                       <!-- Sign In Form -->
                       <form role="form" action="model/acceder.php" method="post" id="form-login">
                         <div class="form-floating mb-1">
-                          <input type="codigo" name="codigo" class="form-control" id="floatingInput" placeholder="Codigo Estudiantil">
+                          <input type="codigo" name="codigo" class="form-control" id="floatingInput" placeholder="Codigo">
                           <label for="floatingInput">Usuario</label>
                         </div>
                         <div class="form-floating mb-1">
