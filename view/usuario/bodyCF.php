@@ -44,7 +44,13 @@
         for ($k=0;$k<$j;$k++){
           echo "<ul class='col-md-4 list-group list-group-horizontal-xl text-center'>";
           echo "<input class='chk' id='cb$k' name='chk[]' value='$idcandidato[$k]' type='radio' style='visibility:hidden';/>";
-          echo "<label style=' border: 10px solid gray' for='cb$k' >";
+          echo "<label style=' border: 10px solid gray' for='cb$k' > <br>";
+          if (empty($prog[$k])) {
+          }else {
+            echo "<li class='list-group-item text-center' style='background-color: rgb(65,105,225);'>";
+            echo "<h2 style='color:white;'>",$contador = $contador + 1,"</h2>";
+            echo "</li>";
+          }
           echo "<img style='width: auto;height: auto;' src='../../assets/img/candidatos/$foto[$k]'/>";
           echo  "<li class='list-group-item text-center'>$nom1[$k] $nom2[$k] <br>";
           echo  "$ape1[$k] $ape2[$k]<br><br>";
