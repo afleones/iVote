@@ -40,7 +40,8 @@
                         <div class="form-floating mb-1">
                           <input type="password" name ="password" class="form-control" id="password" placeholder="Contraseña">
                           <label for="password">Contraseña</label>
-                          <input type="checkbox" id="password" onclick="verPassword()">Mostrar Contraseña
+                          <img src="assets/img/eyegray.png" class="ma mt8 outlinenone ng-scope"
+                           onclick="verPassword()" ng-if="PassTexVar == 0" role="button" tabindex="0" style="" id="eye"><a onclick="verPassword()"> Mostrar Contraseña</a>
                         </div>
                         <div class="form-floating mb-1">
                           <select class="form-select" aria-label="Default select example" name="id_tipo_usuario" id="id_tipo_usuario">
@@ -78,10 +79,14 @@
                           </select>
                           <label for="floatingInput">Programa</label>
                         </div>
-                        <div class="d-grid">
+                        <div class="d-grid mb-1">
                           <button type="submit">Iniciar Sesion</button>
+                        </div>
                       </form>
-                    </div>
+                      <div class="d-grid mb-1">
+                        <a href="consulta.php" class="btn btn-primary">consultar mi Código</a>
+                      </div>
+
                     <!-- Footer -->
                   <footer class="text-center text-lg-start bg-light text-muted">
 
@@ -89,7 +94,7 @@
                     <!-- Copyright -->
                     <div class="text-center p-4">
                       © 2021 Desarrollado por:
-                      <a class="text-reset fw-bold" href="https://www.unisinucartagena.edu.co/">  Dirección Académica</a>
+                      <a class="text-reset fw-bold" href="https://www.unisinucartagena.edu.co/">Dirección Académica</a>
                     </div>
                     <!-- Copyright -->
                   </footer>

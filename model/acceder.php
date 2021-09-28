@@ -12,7 +12,7 @@
 	// $programa_id = Variable a la que se le asigna el Valor POST
 	$programa_id = $_POST["id_prog"];
 
-	$consulta = "SELECT * FROM usuario WHERE codigo = '$codigo1' AND id_programa = $programa_id";
+	$consulta = "SELECT * FROM usuario WHERE codigo = '$codigo1' AND id_programa = $programa_id AND id_tipo_usuario = '$type'";
 	$resultado = mysqli_query($mysqli,$consulta);
 	$filas =  mysqli_fetch_array($resultado);
 	//variables que me almacenan campos de la tabla usuario
