@@ -42,7 +42,7 @@
 												INNER JOIN candidato ON candidato.id_candidato = usuario.identificacion
 												INNER JOIN programa ON programa.id_programa = usuario.id_programa
 												INNER JOIN facultad ON facultad.id_facultad = programa.id_facultad
-												WHERE usuario.id_tipo_usuario = '".$_SESSION["tipouser"]."' AND facultad.id_facultad = ".$_SESSION["fac"]." ";
+												WHERE usuario.id_tipo_usuario = '".$_SESSION["tipouser"]."' AND facultad.id_facultad = ".$_SESSION["fac"]." ORDER BY numero ";
 
   	$resultado = mysqli_query($mysqli,$consulta); $j=0;
   		while($mostrar=mysqli_fetch_object($resultado)){

@@ -6,12 +6,7 @@ function validarFormulario(evento) {
   evento.preventDefault();
   var usuario = document.getElementById('floatingInput').value;
   if(usuario.length == "") {
-    swal("Digite su Usuario", "Vuelva a intentarlo", "warning");
-    return;
-  }
-  var clave = document.getElementById('password').value;
-  if (clave.length == "") {
-    swal("Digite su Contraseña", "vuelva a intentarlo", "warning");
+    swal("Digite su N° de Identificacion", "Vuelva a intentarlo", "warning");
     return;
   }
   var tipo_usuario = document.getElementById('id_tipo_usuario').value;

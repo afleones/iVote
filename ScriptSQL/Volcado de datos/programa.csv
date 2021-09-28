@@ -1,22 +1,38 @@
-id_programa;nombre;id_facultad
-1;Ingenieria de Sistemas;3
-2;Ingenieria Civil;3
-3;Ingenieria Industrial;3
-4;Ingenieria Agroindustrial;3
-5;Medicina;2
-6;Odontologia;2
-7;Enfermeria;2
-8;Optometria;2
-9;Nutricion;2
-10;Psicologia;1
-11;Biologia Marina;1
-12;Derecho;1
-13;contaduria publica;4
-14;Administracion de Negocios Internacionales;4
-15;Gastronomia;4
-16;Especializacion en Pediatria;2
-100;Voto en blanco Ingenierias;3
-101;Voto en blanco Ciencias Sociales y Humanas;1
-102;Voto en Blanco Ciencias Administrativas, Economica y Contables;4
-103;Voto en Blanco Ciencias Naturales;5
-104;Voto en Blanco Ciencias de la Salud;2
+"id_programa","nombre","id_facultad"
+"1","Ingenieria de Sistemas","3"
+"2","Ingenieria Civil","3"
+"3","Ingeniería Industrial","3"
+"4","Ingenieria Agroindustrial","3"
+"5","Medicina","2"
+"6","Odontologia","2"
+"7","Enfermeria","2"
+"8","Optometria","2"
+"9","Nutricion","2"
+"10","Psicologia","1"
+"11","Biologia Marina","1"
+"12","Derecho","1"
+"13","contaduria publica","4"
+"14","Administracion de Negocios Internacionales","4"
+"15","Gastronomia","4"
+"16","Especializacion en Pediatria","2"
+"17","Esp. en psico clin del niño y adolesc","2"
+"18","Esp. en seguridad y salud trab","2"
+"19","Esp. en neurologia clinica","2"
+"20","Esp. en anestesiologia","2"
+"21","Esp. en cirugia general","2"
+"22","Esp. en cirugia plastica estetica y reconstructiva","2"
+"23","Esp. en ginecologia y obstetricia","2"
+"24","Esp en medicina Interna","2"
+"25","Esp. en oftalmologia","2"
+"26","Esp. en pediatria","2"
+"27","Maestria en Epidemiologia","2"
+"28","Esp. contratacion estatal","1"
+"29","Esp. en derecho medico","1"
+"30","Esp. en auditoria en salud","2"
+"31","Esp. resp contractual y extracontractual","1"
+"32","Esp. resp social organizacional","1"
+"100",,"3"
+"101",,"1"
+"102",,"4"
+"103",,"5"
+"104",,"2"
